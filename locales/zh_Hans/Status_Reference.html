@@ -175,6 +175,12 @@
                   </a>
                 </li>
                 
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
             </ul>
           </div>
         </div>
@@ -1422,8 +1428,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#screws_tilt_adjust" class="md-nav__link">
+    screws_tilt_adjust
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#servo" class="md-nav__link">
     servo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepper_enable" class="md-nav__link">
+    stepper_enable
   </a>
   
 </li>
@@ -1487,6 +1507,13 @@
         <li class="md-nav__item">
   <a href="#webhooks" class="md-nav__link">
     webhooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z_thermal_adjust" class="md-nav__link">
+    z_thermal_adjust
   </a>
   
 </li>
@@ -1597,6 +1624,7 @@
 <ul>
 <li><code>pressure_advance</code>：当前的<a href="Pressure_Advance.html">压力提前</a>值。</li>
 <li><code>smooth_time</code>：当前压力提前平滑时间。</li>
+<li><code>motion_queue</code>：当前与该挤出机步进电机同步的挤出机名称。如果该挤出机步进电机目前未与任何挤出机相关联，则报告为<code>None</code>。</li>
 </ul>
 <h2 id="fan">fan<a class="headerlink" href="#fan" title="Permanent link">&para;</a></h2>
 <p><a href="Config_Reference.html#fan">fan</a>、<a href="Config_Reference.html#heater_fan">heater_fan some_name</a>和<a href="Config_Reference.html#controller_fan">controller_fan some_name</a>对象提供了以下信息：</p>
@@ -1622,7 +1650,7 @@
 <li><code>retract_length</code>、<code>retract_speed</code>、<code>unretract_extra_length</code>、<code>unretract_speed</code>：firmware_retraction 模块的当前设置。如果 <code>SET_RETRACTION</code> 命令改变它们，这些设置可能与配置文件不同。</li>
 </ul>
 <h2 id="gcode_macro">gcode_macro<a class="headerlink" href="#gcode_macro" title="Permanent link">&para;</a></h2>
-<p>[gcode_macro &lt;名称&gt; 对象提供了以下信息：</p>
+<p><a href="Config_Reference.html#gcode_macro">gcode_macro &lt;名称&gt;</a> 对象提供了以下信息：</p>
 <ul>
 <li><code>&lt;变量名&gt;</code>：<a href="Command_Templates.html#variables">gcode_macro 变量</a> 的当前值。</li>
 </ul>
@@ -1694,7 +1722,7 @@
 <li><code>live_extruder_velocity</code>：当前请求的挤出机速度（单位：mm/s）。</li>
 </ul>
 <h2 id="output_pin">output_pin<a class="headerlink" href="#output_pin" title="Permanent link">&para;</a></h2>
-<p>[output_pin &lt;配置名称&gt; 对象提供以下信息：</p>
+<p><a href="Config_Reference.html#output_pin">output_pin &lt;配置名称&gt;</a> 对象提供以下信息：</p>
 <ul>
 <li><code>value</code>：由<code>SET_PIN</code>指令设置的引脚“值”。</li>
 </ul>
@@ -1714,10 +1742,13 @@
 <p><code>print_stats</code> 对象提供了以下信息（如果定义了 <a href="Config_Reference.html#virtual_sdcard">virtual_sdcard</a> 配置分段，则此对象自动可用）：</p>
 <ul>
 <li><code>filename</code>、<code>total_duration</code>、<code>print_duration</code>、<code>filament_used</code>、<code>state</code>、<code>message</code>：virtual_sdcard 打印处于活动状态时有关当前打印的估测。</li>
+<li><code>info.total_layer</code>：最后一条<code>SET_PRINT_STATS_INFO TOTAL_LAYER=&lt;值&gt;</code> G-Code命令的总层值。</li>
+<li><code>info.current_layer</code>: 上一条 <code>SET_PRINT_STATS_INFO CURRENT_LAYER=&lt;值&gt;</code> G代码命令的当前层值。</li>
 </ul>
 <h2 id="probe">probe<a class="headerlink" href="#probe" title="Permanent link">&para;</a></h2>
 <p><a href="Config_Reference.html#probe">probe</a> 对象中提供了以下信息（如果定义了 <a href="Config_Reference.html#bltouch">bltouch</a> 配置分段，则此对象也可用）：</p>
 <ul>
+<li><code>name</code>：返回正在使用的探针的名称。</li>
 <li><code>last_query</code>：如果探针在上一个 QUERY_PROBE 命令期间报告为"已触发"，则返回 True。请注意，如果在宏中使用它，根据模板展开的顺序，必须在包含此引用的宏之前运行 QUERY_PROBE 命令。</li>
 <li><code>last_z_result</code>：返回上一次 PROBE 命令的结果 Z 值。请注意，由于模板展开的顺序，在宏中使用时必须在包含此引用的宏之前运行 PROBE（或类似）命令。</li>
 </ul>
@@ -1731,10 +1762,27 @@
 <ul>
 <li><code>last_query["&lt;限位&gt;"]</code>：如果在最后一次 QUERY_ENDSTOP 命令中，给定的 endstop 处于“触发”状态，则返回 True。注意，如果在宏中使用，由于模板扩展的顺序，QUERY_ENDSTOP 命令必须在包含这个引用的宏之前运行。</li>
 </ul>
+<h2 id="screws_tilt_adjust">screws_tilt_adjust<a class="headerlink" href="#screws_tilt_adjust" title="Permanent link">&para;</a></h2>
+<p>以下信息可在<code>screws_tilt_adjust</code>对象中获取：</p>
+<ul>
+<li><code>error</code>: 如果最近的 <code>SCREWS_TILT_CALCULATE</code> 命令包含了 <code>MAX_DEVIATION</code> 参数，并且任何一个已探测的螺丝坐标超过了指定的 <code>MAX_DEVIATION</code>，则返回 True。</li>
+<li><code>results["&lt;螺丝&gt;"]</code>：包含以下键的字典：<ul>
+<li><code>z</code>: 螺丝坐标测量的 Z 高度。</li>
+<li><code>sign</code>：一个字符串，指定进行必要的调整时旋转螺丝的方向。“CW”表示顺时针，“CCW”表示逆时针。</li>
+<li><code>adjust</code>: 调整螺丝的圈数，格式为 "HH:MM"，其中 "HH" 表示完整螺丝圈数，"MM" 表示代表部分螺丝圈数的 "时钟面的分钟数"。（例如，“01:15”表示旋转螺丝一圈和四分之一圈。）</li>
+<li><code>is_base</code> ：如果这是基准螺丝，则返回True。</li>
+</ul>
+</li>
+</ul>
 <h2 id="servo">servo<a class="headerlink" href="#servo" title="Permanent link">&para;</a></h2>
 <p><a href="Config_Reference.html#servo">servo some_name</a> 对象提供了以下信息：</p>
 <ul>
 <li><code>printer["servo &lt;配置名&gt;"].value</code>：与指定伺服相关 PWM 引脚的上一次设置的值（0.0 和 1.0 之间的值）。</li>
+</ul>
+<h2 id="stepper_enable">stepper_enable<a class="headerlink" href="#stepper_enable" title="Permanent link">&para;</a></h2>
+<p>以下信息可在<code>stepper_enable</code> 对象中获得（这个对象在定义了任何步进电机后可用）：</p>
+<ul>
+<li><code>steppers["&lt;步进器&gt;"]</code> ：如果给定的步进器被启用，返回True。</li>
 </ul>
 <h2 id="system_stats">system_stats<a class="headerlink" href="#system_stats" title="Permanent link">&para;</a></h2>
 <p><code>system_stats</code> 对象提供了以下信息（该对象始终可用）：</p>
@@ -1800,6 +1848,16 @@
 <ul>
 <li><code>state</code>：返回一个表示当前 Klipper 状态的字符串。可能的值为："ready"、"startup"、"shutdown"和"error"。</li>
 <li><code>state_message</code>：提供了一个包含当前 Klipper 状态和上下文的可读字符串。</li>
+</ul>
+<h2 id="z_thermal_adjust">z_thermal_adjust<a class="headerlink" href="#z_thermal_adjust" title="Permanent link">&para;</a></h2>
+<p><code>z_thermal_adjust</code> 对象提供以下信息（如果定义了<a href="Config_Reference.html#z_thermal_adjust">z_thermal_adjust</a>配置分段，该对象就可用）。</p>
+<ul>
+<li><code>enabled</code>：如果启用调整，则返回 True。</li>
+<li><code>temperature</code>：定义传感器的当前（平滑后的）温度。 [摄氏度]</li>
+<li><code>measured_min_temp</code>：最小测量温度。[摄氏度]</li>
+<li><code>measured_max_temp</code>：最大测量温度。[摄氏度]</li>
+<li><code>current_z_adjust</code>：上次计算的z调整[mm]。</li>
+<li><code>z_adjust_ref_temperature</code>：用于计算Z <code>current_z_adjust</code>的当前参考温度[degC]。</li>
 </ul>
 <h2 id="z_tilt">z_tilt<a class="headerlink" href="#z_tilt" title="Permanent link">&para;</a></h2>
 <p><code>z_tilt</code> 对象提供了以下信息（如果定义了 z_tilt，则该对象可用）：</p>

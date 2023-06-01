@@ -1,15 +1,16 @@
 # Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-09-16 16:17+0000\n"
-"Last-Translator: Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>\n"
+"PO-Revision-Date: 2022-12-08 10:47+0000\n"
+"Last-Translator: Evgeniy Khramov <thejenjagamertjg@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/tmc_drivers/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 msgid ""
 "This document provides information on using Trinamic stepper motor drivers "
@@ -111,7 +112,7 @@ msgid ""
 msgstr ""
 
 msgid "Tuning"
-msgstr ""
+msgstr "Тюнинг"
 
 msgid "The procedure described here has six major steps:"
 msgstr ""
@@ -580,10 +581,6 @@ msgid ""
 "motor."
 msgstr ""
 
-#: docs/TMC_Drivers.md:block 94 (header)
-msgid "TMC reports error: `... ShortToGND` OR `LowSideShort`"
-msgstr ""
-
 #: docs/TMC_Drivers.md:block 95 (paragraph)
 msgid ""
 "This indicates the driver has disabled itself because it detected very high "
@@ -822,6 +819,13 @@ msgid ""
 "    G28 X0\n"
 "    G1 X5 F1200\n"
 msgstr ""
+
+#: docs/TMC_Drivers.md:block 110 (header)
+msgid "TMC reports error: `... ShortToGND` OR `ShortToSupply`"
+msgstr ""
+
+#~ msgid "TMC reports error: `... ShortToGND` OR `LowSideShort`"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Then issue a `G28 X0` command and verify the axis does not move at all. If "

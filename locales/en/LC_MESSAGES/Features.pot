@@ -6,19 +6,6 @@ msgid "Klipper has several compelling features:"
 msgstr ""
 
 msgid ""
-"High precision stepper movement. Klipper utilizes an application processor "
-"(such as a low-cost Raspberry Pi) when calculating printer movements. The "
-"application processor determines when to step each stepper motor, it "
-"compresses those events, transmits them to the micro-controller, and then "
-"the micro-controller executes each event at the requested time. Each stepper"
-" event is scheduled with a precision of 25 micro-seconds or better. The "
-"software does not use kinematic estimations (such as the Bresenham "
-"algorithm) - instead it calculates precise step times based on the physics "
-"of acceleration and the physics of the machine kinematics. More precise "
-"stepper movement translates to quieter and more stable printer operation."
-msgstr ""
-
-msgid ""
 "Klipper supports printers with multiple micro-controllers. For example, one "
 "micro-controller could be used to control an extruder, while another "
 "controls the printer's heaters, while a third controls the rest of the "
@@ -92,12 +79,6 @@ msgid "Klipper supports many standard 3d printer features:"
 msgstr ""
 
 msgid ""
-"Works with Octoprint. This allows the printer to be controlled using a "
-"regular web-browser. The same Raspberry Pi that runs Klipper can also run "
-"Octoprint."
-msgstr ""
-
-msgid ""
 "Support for multiple extruders. Extruders with shared heaters and extruders "
 "on independent carriages (IDEX) are also supported."
 msgstr ""
@@ -120,13 +101,6 @@ msgid "Basic thermal heater protection enabled by default."
 msgstr ""
 
 msgid ""
-"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
-"TMC2660, and TMC5160 stepper motor drivers. There is also support for "
-"current control of traditional stepper drivers via AD5206, MCP4451, MCP4728,"
-" MCP4018, and PWM pins."
-msgstr ""
-
-msgid ""
 "Support for common LCD displays attached directly to the printer. A default "
 "menu is also available. The contents of the display and menu can be fully "
 "customized via the config file."
@@ -145,11 +119,6 @@ msgid ""
 "Klipper implements a \"stepper phase endstop\" algorithm that can improve "
 "the accuracy of typical endstop switches. When properly tuned it can improve"
 " a print's first layer bed adhesion."
-msgstr ""
-
-msgid ""
-"Support for measuring and recording acceleration using an adxl345 "
-"accelerometer."
 msgstr ""
 
 msgid ""
@@ -205,12 +174,6 @@ msgstr ""
 
 #: docs/Features.md:block 6 (unordered list)
 msgid ""
-"Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
-"rotary delta, polar, and cable winch style printers."
-msgstr ""
-
-#: docs/Features.md:block 6 (unordered list)
-msgid ""
 "Support for common temperature sensors (eg, common thermistors, AD595, "
 "AD597, AD849x, PT100, PT1000, MAX6675, MAX31855, MAX31856, MAX31865, BME280,"
 " HTU21D, DS18B20, and LM75). Custom thermistors and custom analog "
@@ -230,16 +193,6 @@ msgstr ""
 msgid ""
 "Support for filament presence sensors, filament motion sensors, and filament"
 " width sensors."
-msgstr ""
-
-#: docs/Features.md:block 3 (unordered list)
-msgid ""
-"Best in class performance. Klipper is able to achieve high stepping rates on"
-" both new and old micro-controllers. Even old 8bit micro-controllers can "
-"obtain rates over 175K steps per second. On more recent micro-controllers, "
-"several million steps per second are possible. Higher stepper rates enable "
-"higher print velocities. The stepper event timing remains precise even at "
-"high speeds which improves overall stability."
 msgstr ""
 
 #: docs/Features.md:block 10 (table)
@@ -434,6 +387,143 @@ msgid ""
 "appropriate [config file](../config/), and look for the micro-controller "
 "name in the comments at the top of that file."
 msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "STM32H743"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "9091K"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "6061K"
+msgstr ""
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"High precision stepper movement. Klipper utilizes an application processor "
+"(such as a low-cost Raspberry Pi) when calculating printer movements. The "
+"application processor determines when to step each stepper motor, it "
+"compresses those events, transmits them to the micro-controller, and then "
+"the micro-controller executes each event at the requested time. Each stepper"
+" event is scheduled with a precision of 25 micro-seconds or better. The "
+"software does not use kinematic estimations (such as the Bresenham "
+"algorithm) - instead it calculates precise step times based on the physics "
+"of acceleration and the physics of the machine kinematics. More precise "
+"stepper movement provides quieter and more stable printer operation."
+msgstr ""
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Klipper is hardware agnostic. One should get the same precise timing "
+"independent of the low-level electronics hardware. The Klipper micro-"
+"controller code is designed to faithfully follow the schedule provided by "
+"the Klipper host software (or prominently alert the user if it is unable "
+"to). This makes it easier to use available hardware, to upgrade to new "
+"hardware, and to have confidence in the hardware."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Several web interfaces available. Works with Mainsail, Fluidd, OctoPrint and"
+" others. This allows the printer to be controlled using a regular web-"
+"browser. The same Raspberry Pi that runs Klipper can also run the web "
+"interface."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
+"deltesian, rotary delta, polar, and cable winch style printers."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Run-time \"exclude object\" support. When configured, this module may "
+"facilitate canceling of just one object in a multi-part print."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+"TMC2660, and TMC5160 stepper motor drivers. There is also support for "
+"current control of traditional stepper drivers via AD5206, DAC084S085, "
+"MCP4451, MCP4728, MCP4018, and PWM pins."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for measuring and recording acceleration using an adxl345, mpu9250, "
+"and mpu6050 accelerometers."
+msgstr ""
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Best in class performance. Klipper is able to achieve high stepping rates on"
+" both new and old micro-controllers. Even old 8-bit micro-controllers can "
+"obtain rates over 175K steps per second. On more recent micro-controllers, "
+"several million steps per second are possible. Higher stepper rates enable "
+"higher print velocities. The stepper event timing remains precise even at "
+"high speeds which improves overall stability."
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "AR100"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "3529K"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "2507K"
+msgstr ""
+
+#~ msgid ""
+#~ "Best in class performance. Klipper is able to achieve high stepping rates on"
+#~ " both new and old micro-controllers. Even old 8bit micro-controllers can "
+#~ "obtain rates over 175K steps per second. On more recent micro-controllers, "
+#~ "several million steps per second are possible. Higher stepper rates enable "
+#~ "higher print velocities. The stepper event timing remains precise even at "
+#~ "high speeds which improves overall stability."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "High precision stepper movement. Klipper utilizes an application processor "
+#~ "(such as a low-cost Raspberry Pi) when calculating printer movements. The "
+#~ "application processor determines when to step each stepper motor, it "
+#~ "compresses those events, transmits them to the micro-controller, and then "
+#~ "the micro-controller executes each event at the requested time. Each stepper"
+#~ " event is scheduled with a precision of 25 micro-seconds or better. The "
+#~ "software does not use kinematic estimations (such as the Bresenham "
+#~ "algorithm) - instead it calculates precise step times based on the physics "
+#~ "of acceleration and the physics of the machine kinematics. More precise "
+#~ "stepper movement translates to quieter and more stable printer operation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Works with Octoprint. This allows the printer to be controlled using a "
+#~ "regular web-browser. The same Raspberry Pi that runs Klipper can also run "
+#~ "Octoprint."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2660, and TMC5160 stepper motor drivers. There is also support for "
+#~ "current control of traditional stepper drivers via AD5206, MCP4451, MCP4728,"
+#~ " MCP4018, and PWM pins."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Support for measuring and recording acceleration using an adxl345 "
+#~ "accelerometer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
+#~ "rotary delta, polar, and cable winch style printers."
+#~ msgstr ""
 
 #~ msgid "Arduino Zero (SAMD21)"
 #~ msgstr ""

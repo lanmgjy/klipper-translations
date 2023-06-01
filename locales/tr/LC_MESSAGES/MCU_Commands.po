@@ -1,6 +1,16 @@
-#
+# Kaan Özbilek <info@kaanozbilek.com>, 2023.
+# zafer yazkili <yazkili@hotmail.com>, 2023.
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2023-03-19 11:39+0000\n"
+"Last-Translator: zafer yazkili <yazkili@hotmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/klipper/mcu_commands/tr/>\n"
+"Language: tr\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 msgid ""
 "This document provides information on the low-level micro-controller "
@@ -9,6 +19,10 @@ msgid ""
 " reference for these commands, nor is it an exclusive list of all available "
 "commands."
 msgstr ""
+"Bu belge, Klipper \"host\" yazılımından gönderilen ve Klipper mikro "
+"denetleyici yazılımı tarafından işlenen düşük seviyeli mikro denetleyici "
+"komutları hakkında bilgi sağlar. Bu belge, bu komutlar için yetkili bir "
+"başvuru değildir ve mevcut tüm komutların özel bir listesi değildir."
 
 msgid ""
 "This document may be useful for developers interested in understanding the "
@@ -339,7 +353,7 @@ msgstr ""
 
 #: docs/MCU_Commands.md:block 1 (header)
 msgid "MCU commands"
-msgstr ""
+msgstr "MCU komutları"
 
 #: docs/MCU_Commands.md:block 15 (unordered list)
 msgid ""

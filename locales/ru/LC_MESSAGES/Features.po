@@ -1,41 +1,19 @@
 # Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-09-16 16:17+0000\n"
-"Last-Translator: Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>\n"
+"PO-Revision-Date: 2022-11-30 10:48+0000\n"
+"Last-Translator: Evgeniy Khramov <thejenjagamertjg@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/features/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 msgid "Klipper has several compelling features:"
 msgstr "Клиппер обладает несколькими привлекательными функциями:"
-
-msgid ""
-"High precision stepper movement. Klipper utilizes an application processor "
-"(such as a low-cost Raspberry Pi) when calculating printer movements. The "
-"application processor determines when to step each stepper motor, it "
-"compresses those events, transmits them to the micro-controller, and then "
-"the micro-controller executes each event at the requested time. Each stepper"
-" event is scheduled with a precision of 25 micro-seconds or better. The "
-"software does not use kinematic estimations (such as the Bresenham "
-"algorithm) - instead it calculates precise step times based on the physics "
-"of acceleration and the physics of the machine kinematics. More precise "
-"stepper movement translates to quieter and more stable printer operation."
-msgstr ""
-"Высокоточный шаговый механизм. При расчете перемещений принтера Klipper "
-"использует процессор приложений (например, недорогой Raspberry Pi). "
-"Процессор приложения определяет, когда запускать каждый шаговый двигатель, "
-"он сжимает эти события, передает их в микроконтроллер, а затем "
-"микроконтроллер выполняет каждое событие в запрошенное время. Каждое событие"
-" stepper запланировано с точностью до 25 микросекунд или выше. Программное "
-"обеспечение не использует кинематические оценки (такие как алгоритм "
-"Брезенхэма \"Bresenham\") - вместо этого оно вычисляет точное время шага на "
-"основе физики ускорения и физики кинематики машины. Более точное шаговое "
-"перемещение обеспечивает более тихую и стабильную работу принтера."
 
 msgid ""
 "Klipper supports printers with multiple micro-controllers. For example, one "
@@ -123,12 +101,6 @@ msgid "Klipper supports many standard 3d printer features:"
 msgstr ""
 
 msgid ""
-"Works with Octoprint. This allows the printer to be controlled using a "
-"regular web-browser. The same Raspberry Pi that runs Klipper can also run "
-"Octoprint."
-msgstr ""
-
-msgid ""
 "Support for multiple extruders. Extruders with shared heaters and extruders "
 "on independent carriages (IDEX) are also supported."
 msgstr ""
@@ -151,13 +123,6 @@ msgid "Basic thermal heater protection enabled by default."
 msgstr ""
 
 msgid ""
-"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
-"TMC2660, and TMC5160 stepper motor drivers. There is also support for "
-"current control of traditional stepper drivers via AD5206, MCP4451, MCP4728,"
-" MCP4018, and PWM pins."
-msgstr ""
-
-msgid ""
 "Support for common LCD displays attached directly to the printer. A default "
 "menu is also available. The contents of the display and menu can be fully "
 "customized via the config file."
@@ -176,11 +141,6 @@ msgid ""
 "Klipper implements a \"stepper phase endstop\" algorithm that can improve "
 "the accuracy of typical endstop switches. When properly tuned it can improve"
 " a print's first layer bed adhesion."
-msgstr ""
-
-msgid ""
-"Support for measuring and recording acceleration using an adxl345 "
-"accelerometer."
 msgstr ""
 
 msgid ""
@@ -207,7 +167,7 @@ msgid ""
 msgstr ""
 
 msgid "Micro-controller"
-msgstr ""
+msgstr "Микроконтроллер"
 
 msgid "3 steppers active"
 msgstr ""
@@ -222,22 +182,16 @@ msgid "Beaglebone PRU"
 msgstr ""
 
 msgid "686K"
-msgstr ""
+msgstr "686 тыс."
 
 #: docs/Features.md:block 1 (header)
 msgid "Features"
-msgstr ""
+msgstr "Функции"
 
 #: docs/Features.md:block 6 (unordered list)
 msgid ""
 "Standard G-Code support. Common g-code commands that are produced by typical"
 " \"slicers\" (SuperSlicer, Cura, PrusaSlicer, etc.) are supported."
-msgstr ""
-
-#: docs/Features.md:block 6 (unordered list)
-msgid ""
-"Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
-"rotary delta, polar, and cable winch style printers."
 msgstr ""
 
 #: docs/Features.md:block 6 (unordered list)
@@ -263,139 +217,129 @@ msgid ""
 " width sensors."
 msgstr ""
 
-#: docs/Features.md:block 3 (unordered list)
-msgid ""
-"Best in class performance. Klipper is able to achieve high stepping rates on"
-" both new and old micro-controllers. Even old 8bit micro-controllers can "
-"obtain rates over 175K steps per second. On more recent micro-controllers, "
-"several million steps per second are possible. Higher stepper rates enable "
-"higher print velocities. The stepper event timing remains precise even at "
-"high speeds which improves overall stability."
-msgstr ""
-
 #: docs/Features.md:block 10 (table)
 msgid "1 stepper active"
 msgstr ""
 
 #: docs/Features.md:block 10 (table)
 msgid "157K"
-msgstr ""
+msgstr "157 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "99K"
-msgstr ""
+msgstr "99 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "196K"
-msgstr ""
+msgstr "196 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "123K"
-msgstr ""
+msgstr "123 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "471K"
-msgstr ""
+msgstr "471 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "STM32F042"
-msgstr ""
+msgstr "STM32F042"
 
 #: docs/Features.md:block 10 (table)
 msgid "814K"
-msgstr ""
+msgstr "814 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "578K"
-msgstr ""
+msgstr "578 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "866K"
-msgstr ""
+msgstr "866 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "708K"
-msgstr ""
+msgstr "708 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1180K"
-msgstr ""
+msgstr "1180 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "818K"
-msgstr ""
+msgstr "818 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1273K"
-msgstr ""
+msgstr "1273 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "981K"
-msgstr ""
+msgstr "981 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1690K"
-msgstr ""
+msgstr "1690 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1385K"
-msgstr ""
+msgstr "1385 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1923K"
-msgstr ""
+msgstr "1923 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1351K"
-msgstr ""
+msgstr "1351 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "2353K"
-msgstr ""
+msgstr "2353 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1622K"
-msgstr ""
+msgstr "1622 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "2400K"
-msgstr ""
+msgstr "2400 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1636K"
-msgstr ""
+msgstr "1636 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "2500K"
-msgstr ""
+msgstr "2500 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1674K"
-msgstr ""
+msgstr "1674 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "3077K"
-msgstr ""
+msgstr "3077 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "1885K"
-msgstr ""
+msgstr "1885 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "3652K"
-msgstr ""
+msgstr "3652 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "2459K"
-msgstr ""
+msgstr "2459 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "3913K"
-msgstr ""
+msgstr "3913 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "2634K"
-msgstr ""
+msgstr "2634 тыс."
 
 #: docs/Features.md:block 11 (paragraph)
 msgid ""
@@ -404,12 +348,13 @@ msgid ""
 msgstr ""
 
 #: docs/Features.md:block 10 (table)
+#, fuzzy
 msgid "STM32G0B1"
-msgstr ""
+msgstr "STM32G0B1"
 
 #: docs/Features.md:block 10 (table)
 msgid "1103K"
-msgstr ""
+msgstr "1103 тыс."
 
 #: docs/Features.md:block 10 (table)
 msgid "790K"
@@ -465,6 +410,153 @@ msgid ""
 "appropriate [config file](../config/), and look for the micro-controller "
 "name in the comments at the top of that file."
 msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "STM32H743"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "9091K"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "6061K"
+msgstr ""
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"High precision stepper movement. Klipper utilizes an application processor "
+"(such as a low-cost Raspberry Pi) when calculating printer movements. The "
+"application processor determines when to step each stepper motor, it "
+"compresses those events, transmits them to the micro-controller, and then "
+"the micro-controller executes each event at the requested time. Each stepper"
+" event is scheduled with a precision of 25 micro-seconds or better. The "
+"software does not use kinematic estimations (such as the Bresenham "
+"algorithm) - instead it calculates precise step times based on the physics "
+"of acceleration and the physics of the machine kinematics. More precise "
+"stepper movement provides quieter and more stable printer operation."
+msgstr ""
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Klipper is hardware agnostic. One should get the same precise timing "
+"independent of the low-level electronics hardware. The Klipper micro-"
+"controller code is designed to faithfully follow the schedule provided by "
+"the Klipper host software (or prominently alert the user if it is unable "
+"to). This makes it easier to use available hardware, to upgrade to new "
+"hardware, and to have confidence in the hardware."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Several web interfaces available. Works with Mainsail, Fluidd, OctoPrint and"
+" others. This allows the printer to be controlled using a regular web-"
+"browser. The same Raspberry Pi that runs Klipper can also run the web "
+"interface."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
+"deltesian, rotary delta, polar, and cable winch style printers."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Run-time \"exclude object\" support. When configured, this module may "
+"facilitate canceling of just one object in a multi-part print."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+"TMC2660, and TMC5160 stepper motor drivers. There is also support for "
+"current control of traditional stepper drivers via AD5206, DAC084S085, "
+"MCP4451, MCP4728, MCP4018, and PWM pins."
+msgstr ""
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for measuring and recording acceleration using an adxl345, mpu9250, "
+"and mpu6050 accelerometers."
+msgstr ""
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Best in class performance. Klipper is able to achieve high stepping rates on"
+" both new and old micro-controllers. Even old 8-bit micro-controllers can "
+"obtain rates over 175K steps per second. On more recent micro-controllers, "
+"several million steps per second are possible. Higher stepper rates enable "
+"higher print velocities. The stepper event timing remains precise even at "
+"high speeds which improves overall stability."
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "AR100"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "3529K"
+msgstr ""
+
+#: docs/Features.md:block 10 (table)
+msgid "2507K"
+msgstr ""
+
+#~ msgid ""
+#~ "Best in class performance. Klipper is able to achieve high stepping rates on"
+#~ " both new and old micro-controllers. Even old 8bit micro-controllers can "
+#~ "obtain rates over 175K steps per second. On more recent micro-controllers, "
+#~ "several million steps per second are possible. Higher stepper rates enable "
+#~ "higher print velocities. The stepper event timing remains precise even at "
+#~ "high speeds which improves overall stability."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "High precision stepper movement. Klipper utilizes an application processor "
+#~ "(such as a low-cost Raspberry Pi) when calculating printer movements. The "
+#~ "application processor determines when to step each stepper motor, it "
+#~ "compresses those events, transmits them to the micro-controller, and then "
+#~ "the micro-controller executes each event at the requested time. Each stepper"
+#~ " event is scheduled with a precision of 25 micro-seconds or better. The "
+#~ "software does not use kinematic estimations (such as the Bresenham "
+#~ "algorithm) - instead it calculates precise step times based on the physics "
+#~ "of acceleration and the physics of the machine kinematics. More precise "
+#~ "stepper movement translates to quieter and more stable printer operation."
+#~ msgstr ""
+#~ "Высокоточный шаговый механизм. При расчете перемещений принтера Klipper "
+#~ "использует процессор приложений (например, недорогой Raspberry Pi). "
+#~ "Процессор приложения определяет, когда запускать каждый шаговый двигатель, "
+#~ "он сжимает эти события, передает их в микроконтроллер, а затем "
+#~ "микроконтроллер выполняет каждое событие в запрошенное время. Каждое событие"
+#~ " stepper запланировано с точностью до 25 микросекунд или выше. Программное "
+#~ "обеспечение не использует кинематические оценки (такие как алгоритм "
+#~ "Брезенхэма \"Bresenham\") - вместо этого оно вычисляет точное время шага на "
+#~ "основе физики ускорения и физики кинематики машины. Более точное шаговое "
+#~ "перемещение обеспечивает более тихую и стабильную работу принтера."
+
+#~ msgid ""
+#~ "Works with Octoprint. This allows the printer to be controlled using a "
+#~ "regular web-browser. The same Raspberry Pi that runs Klipper can also run "
+#~ "Octoprint."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2660, and TMC5160 stepper motor drivers. There is also support for "
+#~ "current control of traditional stepper drivers via AD5206, MCP4451, MCP4728,"
+#~ " MCP4018, and PWM pins."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Support for measuring and recording acceleration using an adxl345 "
+#~ "accelerometer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
+#~ "rotary delta, polar, and cable winch style printers."
+#~ msgstr ""
 
 #~ msgid "Arduino Zero (SAMD21)"
 #~ msgstr ""

@@ -1,39 +1,25 @@
 # Neko.vecter <Vecterfang@icloud.com>, 2021.
-# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2022.
+# Yifei Ding <dingyifeiair@gmail.com>, 2021, 2022, 2023.
+# 红豆蛋黄派 <zgpride87@outlook.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: 2021-07-15 06:32+0200\n"
-"PO-Revision-Date: 2022-05-02 04:16+0000\n"
+"PO-Revision-Date: 2023-04-07 22:49+0000\n"
 "Last-Translator: Yifei Ding <dingyifeiair@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/klipper/features/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"klipper/features/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.12.1\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: docs/Features.md:block 1 (paragraph)
 msgid "Klipper has several compelling features:"
 msgstr "Klipper 有几个引人注目的功能："
-
-#: docs/Features.md:block 2 (unordered list)
-msgid ""
-"High precision stepper movement. Klipper utilizes an application processor "
-"(such as a low-cost Raspberry Pi) when calculating printer movements. The "
-"application processor determines when to step each stepper motor, it "
-"compresses those events, transmits them to the micro-controller, and then "
-"the micro-controller executes each event at the requested time. Each stepper"
-" event is scheduled with a precision of 25 micro-seconds or better. The "
-"software does not use kinematic estimations (such as the Bresenham "
-"algorithm) - instead it calculates precise step times based on the physics "
-"of acceleration and the physics of the machine kinematics. More precise "
-"stepper movement translates to quieter and more stable printer operation."
-msgstr ""
-"高精度步进运动。Klipper使用一个应用处理器（例如低成本的树莓派）来计算打印机运动。应用处理器决定何时对每个步进电机发出步进信号，压缩这些事件，并将它们发送到微控制器。微处理器将会把每个事件按请求时间执行。每一个步进事件被以25毫秒或更高的精度安排。软件不进行运动估计，例如"
-" Bresenham算法，而是通过加速度与机械运动物理计算精确的步进时间。更精准的步进电机运动意味着打印机更安静和稳定的运行。"
 
 #: docs/Features.md:block 2 (unordered list)
 msgid ""
@@ -135,13 +121,6 @@ msgstr "Klipper 支持许多标准的 3d 打印机功能："
 
 #: docs/Features.md:block 5 (unordered list)
 msgid ""
-"Works with Octoprint. This allows the printer to be controlled using a "
-"regular web-browser. The same Raspberry Pi that runs Klipper can also run "
-"Octoprint."
-msgstr "兼容Octoprint。这使得打印机可以通过普通浏览器来控制。运行Klipper的树莓派可以同时用来运行Octoprint。"
-
-#: docs/Features.md:block 5 (unordered list)
-msgid ""
 "Support for multiple extruders. Extruders with shared heaters and extruders "
 "on independent carriages (IDEX) are also supported."
 msgstr "支持多挤出机。包括对共享热端的挤出机（多进一出）和多头（IDEX）的支持。"
@@ -170,15 +149,6 @@ msgstr "默认启用基本加热器保护。"
 
 #: docs/Features.md:block 5 (unordered list)
 msgid ""
-"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
-"TMC2660, and TMC5160 stepper motor drivers. There is also support for "
-"current control of traditional stepper drivers via AD5206, MCP4451, MCP4728,"
-" MCP4018, and PWM pins."
-msgstr ""
-"支持TMC2130、TMC2208/TMC2224、TMC2209、TMC2660和TMC5160步进电机驱动器的运行时配置。还支持通过AD5206、MCP4451、MCP4728、MCP4018和PWM引脚对传统步进驱动器进行电流控制。"
-
-#: docs/Features.md:block 5 (unordered list)
-msgid ""
 "Support for common LCD displays attached directly to the printer. A default "
 "menu is also available. The contents of the display and menu can be fully "
 "customized via the config file."
@@ -202,12 +172,6 @@ msgid ""
 "the accuracy of typical endstop switches. When properly tuned it can improve"
 " a print's first layer bed adhesion."
 msgstr "Klipper 实现了一种“步进相位限位”算法，可以提高典型限位开关的精度。如果调整得当，它可以提高打印件首层和打印床的附着力。"
-
-#: docs/Features.md:block 5 (unordered list)
-msgid ""
-"Support for measuring and recording acceleration using an adxl345 "
-"accelerometer."
-msgstr "支持使用 adxl345 加速度计测量和记录加速度。"
 
 #: docs/Features.md:block 5 (unordered list)
 msgid ""
@@ -273,12 +237,6 @@ msgstr "标准 G 代码支持。支持由常见“切片软件”（SuperSlicer�
 
 #: docs/Features.md:block 6 (unordered list)
 msgid ""
-"Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
-"rotary delta, polar, and cable winch style printers."
-msgstr "支持笛卡尔、三角洲、CoreXY、CoreXZ、混合CoreXY、混合CoreXZ、旋转三角洲、极坐标和缆绳铰盘式打印机。"
-
-#: docs/Features.md:block 6 (unordered list)
-msgid ""
 "Support for common temperature sensors (eg, common thermistors, AD595, "
 "AD597, AD849x, PT100, PT1000, MAX6675, MAX31855, MAX31856, MAX31865, BME280,"
 " HTU21D, DS18B20, and LM75). Custom thermistors and custom analog "
@@ -301,18 +259,6 @@ msgid ""
 "Support for filament presence sensors, filament motion sensors, and filament"
 " width sensors."
 msgstr "支持打印丝存在传感器、打印丝运动传感器和打印丝宽度传感器。"
-
-#: docs/Features.md:block 3 (unordered list)
-msgid ""
-"Best in class performance. Klipper is able to achieve high stepping rates on"
-" both new and old micro-controllers. Even old 8bit micro-controllers can "
-"obtain rates over 175K steps per second. On more recent micro-controllers, "
-"several million steps per second are possible. Higher stepper rates enable "
-"higher print velocities. The stepper event timing remains precise even at "
-"high speeds which improves overall stability."
-msgstr ""
-"同类项目中最佳的性能。 Klipper 能够在新旧微控制器上实现高步进速率。即使是旧的 8 位微控制器也可以发送超过每秒 175K "
-"步的速率。在较新的微控制器上，每秒数百万步也可以实现。更高的步进速率可以实现更高的打印速度。步进事件计时即使在高速下也能保持精确，提高了整体稳定性。"
 
 #: docs/Features.md:block 10 (table)
 msgid "1 stepper active"
@@ -506,6 +452,159 @@ msgid ""
 "appropriate [config file](../config/), and look for the micro-controller "
 "name in the comments at the top of that file."
 msgstr "如果不确定一个控制板上的微控制器型号，可以先找到相应的[配置文件](../config/)，并在该文件顶部的注释中寻找微控制器的型号。"
+
+#: docs/Features.md:block 10 (table)
+msgid "STM32H743"
+msgstr "STM32H743"
+
+#: docs/Features.md:block 10 (table)
+msgid "9091K"
+msgstr "9091K"
+
+#: docs/Features.md:block 10 (table)
+msgid "6061K"
+msgstr "6061K"
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"High precision stepper movement. Klipper utilizes an application processor "
+"(such as a low-cost Raspberry Pi) when calculating printer movements. The "
+"application processor determines when to step each stepper motor, it "
+"compresses those events, transmits them to the micro-controller, and then "
+"the micro-controller executes each event at the requested time. Each stepper"
+" event is scheduled with a precision of 25 micro-seconds or better. The "
+"software does not use kinematic estimations (such as the Bresenham "
+"algorithm) - instead it calculates precise step times based on the physics "
+"of acceleration and the physics of the machine kinematics. More precise "
+"stepper movement provides quieter and more stable printer operation."
+msgstr ""
+"高精度步进运动。Klipper使用一个应用处理器（例如低成本的树莓派）来计算打印机运动。应用处理器决定何时对每个步进电机发出步进信号，压缩这些事件，并将它们发送到微控制器。微处理器将会把每个事件按请求时间执行。每一个步进事件被以25毫秒或更高的精度安排。Klipper不使用运动估计，例如"
+" Bresenham算法，而是通过加速度与机械运动物理计算精确的步进时间。更精准的步进电机运动意味着打印机更安静和稳定的运行。"
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Klipper is hardware agnostic. One should get the same precise timing "
+"independent of the low-level electronics hardware. The Klipper micro-"
+"controller code is designed to faithfully follow the schedule provided by "
+"the Klipper host software (or prominently alert the user if it is unable "
+"to). This makes it easier to use available hardware, to upgrade to new "
+"hardware, and to have confidence in the hardware."
+msgstr ""
+"Klipper 不受硬件影响。所有运行Klipper的打印机都有底层硬件无关的相同精确时序。Klipper 微控制器代码旨在忠实地遵循 Klipper "
+"主机软件提供的时间表（或在无法遵循时突出显示提醒用户）。这样可以放心、轻松的使用和升级硬件。"
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Several web interfaces available. Works with Mainsail, Fluidd, OctoPrint and"
+" others. This allows the printer to be controlled using a regular web-"
+"browser. The same Raspberry Pi that runs Klipper can also run the web "
+"interface."
+msgstr ""
+"提供多种网络界面。兼容Mainsail、Fluidd、OctoPrint和其他选择。这允许使用普通的网络浏览器来控制打印机。运行Klipper的树莓派也可以运行网络界面。"
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
+"deltesian, rotary delta, polar, and cable winch style printers."
+msgstr ""
+"支持笛卡尔、三角洲、CoreXY、CoreXZ、混合CoreXY、混合CoreXZ、deltesian、旋转三角洲、极坐标和缆绳铰盘式打印机。"
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Run-time \"exclude object\" support. When configured, this module may "
+"facilitate canceling of just one object in a multi-part print."
+msgstr "支持打印时“排除对象”。配置后，此模块可以取消多零件打印中的一个对象。"
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+"TMC2660, and TMC5160 stepper motor drivers. There is also support for "
+"current control of traditional stepper drivers via AD5206, DAC084S085, "
+"MCP4451, MCP4728, MCP4018, and PWM pins."
+msgstr ""
+"支持TMC2130、TMC2208/TMC2224、TMC2209、TMC2660和TMC5160步进电机驱动器的运行时配置。还支持通过AD5206、DAC084S085、MCP4451、MCP4728、MCP4018和PWM引脚对传统步进驱动器进行电流控制。"
+
+#: docs/Features.md:block 6 (unordered list)
+msgid ""
+"Support for measuring and recording acceleration using an adxl345, mpu9250, "
+"and mpu6050 accelerometers."
+msgstr "支持使用 adxl345、mpu9250 和 mpu 6050 加速度计测量和记录加速度。"
+
+#: docs/Features.md:block 3 (unordered list)
+msgid ""
+"Best in class performance. Klipper is able to achieve high stepping rates on"
+" both new and old micro-controllers. Even old 8-bit micro-controllers can "
+"obtain rates over 175K steps per second. On more recent micro-controllers, "
+"several million steps per second are possible. Higher stepper rates enable "
+"higher print velocities. The stepper event timing remains precise even at "
+"high speeds which improves overall stability."
+msgstr ""
+"最佳表现。Klipper 能够在新旧微控制器上实现高步进速率。即使是老的 8 "
+"位微控制器也可以获得超过 175K 步/秒的速率。在较新的微控制器上，数百万步/秒也"
+"是可能的。更高的步进速率使打印速度更快。即使在高速运行时，步进电机的事件定时"
+"仍然保持精确，从而提高了整体稳定性。"
+
+#: docs/Features.md:block 10 (table)
+msgid "AR100"
+msgstr "AR100"
+
+#: docs/Features.md:block 10 (table)
+msgid "3529K"
+msgstr "3529K"
+
+#: docs/Features.md:block 10 (table)
+msgid "2507K"
+msgstr "2507K"
+
+#~ msgid ""
+#~ "Best in class performance. Klipper is able to achieve high stepping rates on"
+#~ " both new and old micro-controllers. Even old 8bit micro-controllers can "
+#~ "obtain rates over 175K steps per second. On more recent micro-controllers, "
+#~ "several million steps per second are possible. Higher stepper rates enable "
+#~ "higher print velocities. The stepper event timing remains precise even at "
+#~ "high speeds which improves overall stability."
+#~ msgstr ""
+#~ "同类项目中最佳的性能。 Klipper 能够在新旧微控制器上实现高步进速率。即使是旧的 8 位微控制器也可以发送超过每秒 175K "
+#~ "步的速率。在较新的微控制器上，每秒数百万步也可以实现。更高的步进速率可以实现更高的打印速度。步进事件计时即使在高速下也能保持精确，提高了整体稳定性。"
+
+#~ msgid ""
+#~ "High precision stepper movement. Klipper utilizes an application processor "
+#~ "(such as a low-cost Raspberry Pi) when calculating printer movements. The "
+#~ "application processor determines when to step each stepper motor, it "
+#~ "compresses those events, transmits them to the micro-controller, and then "
+#~ "the micro-controller executes each event at the requested time. Each stepper"
+#~ " event is scheduled with a precision of 25 micro-seconds or better. The "
+#~ "software does not use kinematic estimations (such as the Bresenham "
+#~ "algorithm) - instead it calculates precise step times based on the physics "
+#~ "of acceleration and the physics of the machine kinematics. More precise "
+#~ "stepper movement translates to quieter and more stable printer operation."
+#~ msgstr ""
+#~ "高精度步进运动。Klipper使用一个应用处理器（例如低成本的树莓派）来计算打印机运动。应用处理器决定何时对每个步进电机发出步进信号，压缩这些事件，并将它们发送到微控制器。微处理器将会把每个事件按请求时间执行。每一个步进事件被以25毫秒或更高的精度安排。软件不进行运动估计，例如"
+#~ " Bresenham算法，而是通过加速度与机械运动物理计算精确的步进时间。更精准的步进电机运动意味着打印机更安静和稳定的运行。"
+
+#~ msgid ""
+#~ "Works with Octoprint. This allows the printer to be controlled using a "
+#~ "regular web-browser. The same Raspberry Pi that runs Klipper can also run "
+#~ "Octoprint."
+#~ msgstr "兼容Octoprint。这使得打印机可以通过普通浏览器来控制。运行Klipper的树莓派可以同时用来运行Octoprint。"
+
+#~ msgid ""
+#~ "Support for run-time configuration of TMC2130, TMC2208/TMC2224, TMC2209, "
+#~ "TMC2660, and TMC5160 stepper motor drivers. There is also support for "
+#~ "current control of traditional stepper drivers via AD5206, MCP4451, MCP4728,"
+#~ " MCP4018, and PWM pins."
+#~ msgstr ""
+#~ "支持TMC2130、TMC2208/TMC2224、TMC2209、TMC2660和TMC5160步进电机驱动器的运行时配置。还支持通过AD5206、MCP4451、MCP4728、MCP4018和PWM引脚对传统步进驱动器进行电流控制。"
+
+#~ msgid ""
+#~ "Support for measuring and recording acceleration using an adxl345 "
+#~ "accelerometer."
+#~ msgstr "支持使用 adxl345 加速度计测量和记录加速度。"
+
+#~ msgid ""
+#~ "Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, "
+#~ "rotary delta, polar, and cable winch style printers."
+#~ msgstr "支持笛卡尔、三角洲、CoreXY、CoreXZ、混合CoreXY、混合CoreXZ、旋转三角洲、极坐标和缆绳铰盘式打印机。"
 
 #~ msgid "Arduino Zero (SAMD21)"
 #~ msgstr "Arduino Zero (SAMD21)"

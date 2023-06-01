@@ -6,8 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "PO-Revision-Date: 2022-10-05 22:22+0000\n"
 "Last-Translator: Cecilia Mora <cecilia-mora22@hotmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/klipper/"
-"contributing/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/klipper/contributing/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -505,18 +504,6 @@ msgstr ""
 msgid "Core motion system, Micro-controller code"
 msgstr ""
 
-#: docs/CONTRIBUTING.md:block 23 (table)
-msgid "Paul McGowan"
-msgstr ""
-
-#: docs/CONTRIBUTING.md:block 23 (table)
-msgid "@mental405"
-msgstr ""
-
-#: docs/CONTRIBUTING.md:block 23 (table)
-msgid "Configuration files, documentation"
-msgstr ""
-
 #: docs/CONTRIBUTING.md:block 24 (paragraph)
 msgid ""
 "Please do not \"ping\" any of the reviewers and please do not direct "
@@ -610,6 +597,34 @@ msgid ""
 "Some of Klipper's most notable features took months of discussion, rework, "
 "testing, and documentation prior to being merged into the master branch."
 msgstr ""
+
+#: docs/CONTRIBUTING.md:block 13 (ordered list)
+msgid ""
+"When fixing a defect in the code, submitters should have a general "
+"understanding of the root cause of that defect, and the fix should target "
+"that root cause."
+msgstr ""
+
+#: docs/CONTRIBUTING.md:block 23 (table)
+msgid "James Hartley"
+msgstr ""
+
+#: docs/CONTRIBUTING.md:block 23 (table)
+msgid "@JamesH1978"
+msgstr ""
+
+#: docs/CONTRIBUTING.md:block 23 (table)
+msgid "Configuration files"
+msgstr ""
+
+#~ msgid "Paul McGowan"
+#~ msgstr ""
+
+#~ msgid "@mental405"
+#~ msgstr ""
+
+#~ msgid "Configuration files, documentation"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "When discussing benefits it is preferable to discuss \"facts and "

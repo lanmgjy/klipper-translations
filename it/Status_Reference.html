@@ -175,6 +175,12 @@
                   </a>
                 </li>
                 
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
             </ul>
           </div>
         </div>
@@ -993,8 +999,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#screws_tilt_adjust" class="md-nav__link">
+    screws_tilt_adjust
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#servo" class="md-nav__link">
     servo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepper_enable" class="md-nav__link">
+    stepper_enable
   </a>
   
 </li>
@@ -1058,6 +1078,13 @@
         <li class="md-nav__item">
   <a href="#webhooks" class="md-nav__link">
     webhooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z_thermal_adjust" class="md-nav__link">
+    z_thermal_adjust
   </a>
   
 </li>
@@ -1740,8 +1767,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#screws_tilt_adjust" class="md-nav__link">
+    screws_tilt_adjust
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#servo" class="md-nav__link">
     servo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepper_enable" class="md-nav__link">
+    stepper_enable
   </a>
   
 </li>
@@ -1805,6 +1846,13 @@
         <li class="md-nav__item">
   <a href="#webhooks" class="md-nav__link">
     webhooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z_thermal_adjust" class="md-nav__link">
+    z_thermal_adjust
   </a>
   
 </li>
@@ -1915,6 +1963,7 @@
 <ul>
 <li><code>pressure_advance</code>: il valore corrente di <a href="Pressure_Advance.html">pressure advance</a>.</li>
 <li><code>smooth_time</code>: il tempo di avanzamento graduale della pressure advance corrente.</li>
+<li><code>motion_queue</code>: The name of the extruder that this extruder stepper is currently synchronized to. This is reported as <code>None</code> if the extruder stepper is not currently associated with an extruder.</li>
 </ul>
 <h2 id="fan">fan<a class="headerlink" href="#fan" title="Permanent link">&para;</a></h2>
 <p>Le seguenti informazioni sono disponibili negli oggetti <a href="Config_Reference.html#fan">fan</a>, <a href="Config_Reference.html#heater_fan">heater_fan some_name</a> e <a href="Config_Reference.html#controller_fan">controller_fan some_name</a>:</p>
@@ -2032,10 +2081,13 @@
 <p>Le seguenti informazioni sono disponibili nell'oggetto <code>print_stats</code> (questo oggetto è automaticamente disponibile se è definita una sezione di configurazione <a href="Config_Reference.html#virtual_sdcard">virtual_sdcard</a>):</p>
 <ul>
 <li><code>filename</code>, <code>total_duration</code>, <code>print_duration</code>, <code>filament_used</code>, <code>state</code>, <code>message</code>: informazioni stimate sulla stampa corrente quando è attiva una stampa da virtual_sdcard.</li>
+<li><code>info.total_layer</code>: Il valore totale del layer dell'ultimo comando G-Code <code>SET_PRINT_STATS_INFO TOTAL_LAYER=&lt;valore&gt;</code>.</li>
+<li><code>info.current_layer</code>: il valore del layer corrente dell'ultimo comando G-Code <code>SET_PRINT_STATS_INFO CURRENT_LAYER=&lt;valore&gt;</code>.</li>
 </ul>
 <h2 id="probe">probe<a class="headerlink" href="#probe" title="Permanent link">&para;</a></h2>
 <p>Le seguenti informazioni sono disponibili nell'oggetto <a href="Config_Reference.html#probe">probe</a> (questo oggetto è disponibile anche se è definita una sezione di configurazione <a href="Config_Reference.html#bltouch">bltouch</a>):</p>
 <ul>
+<li><code>name</code>: Returns the name of the probe in use.</li>
 <li><code>last_query</code>: Restituisce True se il probe è stato segnalato come "attivato" durante l'ultimo comando QUERY_PROBE. Nota, se questo viene utilizzato in una macro, a causa dell'ordine di espansione del modello, il comando QUERY_PROBE deve essere eseguito prima della macro contenente questo riferimento.</li>
 <li><code>last_z_result</code>: Restituisce il valore del risultato Z dell'ultimo comando PROBE. Nota, se questo viene utilizzato in una macro, a causa dell'ordine di espansione del modello, il comando PROBE (o simile) deve essere eseguito prima della macro contenente questo riferimento.</li>
 </ul>
@@ -2049,10 +2101,27 @@
 <ul>
 <li><code>last_query["&lt;endstop&gt;"]</code>: Restituisce True se l'endstop specificato è stato segnalato come "attivato-triggered" durante l'ultimo comando QUERY_ENDSTOP. Nota, se questo viene utilizzato in una macro, a causa dell'ordine di espansione del modello, il comando QUERY_ENDSTOP deve essere eseguito prima della macro contenente questo riferimento.</li>
 </ul>
+<h2 id="screws_tilt_adjust">screws_tilt_adjust<a class="headerlink" href="#screws_tilt_adjust" title="Permanent link">&para;</a></h2>
+<p>Le seguenti informazioni sono disponibili nell'oggetto <code>screws_tilt_adjust</code>:</p>
+<ul>
+<li><code>error</code>: restituisce True se il comando <code>SCREWS_TILT_CALCULATE</code> più recente includeva il parametro <code>MAX_DEVIATION</code> e uno qualsiasi dei punti della vite rilevati superava il <code>MAX_DEVIATION</code> specificato.</li>
+<li><code>results["&lt;screw&gt;"]</code>: A dictionary containing the following keys:<ul>
+<li><code>z</code>: L'altezza Z misurata della posizione della vite.</li>
+<li><code>sign</code>: A string specifying the direction to turn to screw for the necessary adjustment. Either "CW" for clockwise or "CCW" for counterclockwise.</li>
+<li><code>adjust</code>: il numero di giri di vite per regolare la vite, dato nel formato "HH:MM", dove "HH" è il numero di giri di vite completi e "MM" è il numero di "minuti di un quadrante di orologio" che rappresenta un giro di vite parziale. (Es. "01:15" significherebbe girare la vite di un giro e un quarto.)</li>
+<li><code>is_base</code>: Returns True if this is the base screw.</li>
+</ul>
+</li>
+</ul>
 <h2 id="servo">servo<a class="headerlink" href="#servo" title="Permanent link">&para;</a></h2>
 <p>Le seguenti informazioni sono disponibili negli oggetti <a href="Config_Reference.html#servo">servo some_name</a>:</p>
 <ul>
 <li><code>printer["servo &lt;config_name&gt;"].value</code>: l'ultima impostazione del pin PWM (un valore compreso tra 0.0 e 1.0) associata al servo.</li>
+</ul>
+<h2 id="stepper_enable">stepper_enable<a class="headerlink" href="#stepper_enable" title="Permanent link">&para;</a></h2>
+<p>The following information is available in the <code>stepper_enable</code> object (this object is available if any stepper is defined):</p>
+<ul>
+<li><code>steppers["&lt;stepper&gt;"]</code>: Returns True if the given stepper is enabled.</li>
 </ul>
 <h2 id="system_stats">system_stats<a class="headerlink" href="#system_stats" title="Permanent link">&para;</a></h2>
 <p>Le seguenti informazioni sono disponibili nell'oggetto <code>system_stats</code> (questo oggetto è sempre disponibile):</p>
@@ -2118,6 +2187,16 @@
 <ul>
 <li><code>state</code>: restituisce una stringa che indica lo stato corrente di Klipper. I valori possibili sono: "ready", "startup", "shutdown", "error".</li>
 <li><code>state_message</code>: una stringa leggibile dall'uomo che fornisce un contesto aggiuntivo sullo stato corrente di Klipper.</li>
+</ul>
+<h2 id="z_thermal_adjust">z_thermal_adjust<a class="headerlink" href="#z_thermal_adjust" title="Permanent link">&para;</a></h2>
+<p>Le seguenti informazioni sono disponibili nell'oggetto <code>z_thermal_adjust</code> (questo oggetto è disponibile se <a href="Config_Reference.html#z_thermal_adjust">z_thermal_adjust</a> è definito).</p>
+<ul>
+<li><code>enabled</code>: Restituisce True se la regolazione è abilitata.</li>
+<li><code>temperature</code>: temperatura attuale (livellata) del sensore definito. [grado C]</li>
+<li><code>measured_min_temp</code>: temperatura minima misurata. [degC]</li>
+<li><code>measured_max_temp</code>: Temperatura massima misurata. [degC]</li>
+<li><code>current_z_adjust</code>: Ultima regolazione Z calcolata [mm].</li>
+<li><code>z_adjust_ref_temperature</code>:Temperatura di riferimento corrente utilizzata per il calcolo di Z <code>current_z_adjust</code> [degC].</li>
 </ul>
 <h2 id="z_tilt">z_tilt<a class="headerlink" href="#z_tilt" title="Permanent link">&para;</a></h2>
 <p>Le seguenti informazioni sono disponibili nell'oggetto <code>z_tilt</code> (questo oggetto è disponibile se z_tilt è definito):</p>

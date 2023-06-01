@@ -1,14 +1,22 @@
-#
+# Francisco Lima <limamg@gmail.com>, 2023.
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2023-01-19 00:50+0000\n"
+"Last-Translator: Francisco Lima <limamg@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/klipper/tmc_drivers/pt_BR/>\n"
 "Language: pt_BR\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 msgid ""
 "This document provides information on using Trinamic stepper motor drivers "
 "in SPI/UART mode on Klipper."
 msgstr ""
+"Este documento fornece informações sobre como usar drivers de motor de passo"
+" Trinamic no modo SPI/UART no Klipper."
 
 msgid ""
 "Klipper can also use Trinamic drivers in their \"standalone mode\". However,"
@@ -566,10 +574,6 @@ msgid ""
 "motor."
 msgstr ""
 
-#: docs/TMC_Drivers.md:block 94 (header)
-msgid "TMC reports error: `... ShortToGND` OR `LowSideShort`"
-msgstr ""
-
 #: docs/TMC_Drivers.md:block 95 (paragraph)
 msgid ""
 "This indicates the driver has disabled itself because it detected very high "
@@ -808,6 +812,13 @@ msgid ""
 "    G28 X0\n"
 "    G1 X5 F1200\n"
 msgstr ""
+
+#: docs/TMC_Drivers.md:block 110 (header)
+msgid "TMC reports error: `... ShortToGND` OR `ShortToSupply`"
+msgstr ""
+
+#~ msgid "TMC reports error: `... ShortToGND` OR `LowSideShort`"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Then issue a `G28 X0` command and verify the axis does not move at all. If "

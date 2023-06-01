@@ -3,15 +3,14 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-09-26 11:24+0000\n"
+"PO-Revision-Date: 2022-12-26 16:42+0000\n"
 "Last-Translator: Ale Ale <ale.99.ale@gmail.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/klipper/"
-"measuring_resonances/it/>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/klipper/measuring_resonances/it/>\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 msgid "Measuring Resonances"
 msgstr "Misurazione delle risonanze"
@@ -115,13 +114,6 @@ msgstr "Schemi collegamenti Fritzing per alcune delle schede ADXL345:"
 
 msgid "![ADXL345-Rpi](img/adxl345-fritzing.png)"
 msgstr "![ADXL345-Rpi](img/adxl345-fritzing.png)"
-
-msgid ""
-"Double-check your wiring before powering up the Raspberry Pi to prevent "
-"damaging it or the accelerometer."
-msgstr ""
-"Ricontrolla il cablaggio prima di accendere il Raspberry Pi per evitare di "
-"danneggiare RPi o l'accelerometro."
 
 msgid "Mounting the accelerometer"
 msgstr "Montaggio dell'accelerometro"
@@ -235,18 +227,6 @@ msgstr ""
 "l'accelerazione di caduta libera, ad es."
 
 msgid ""
-"If you get an error like `Invalid adxl345 id (got xx vs e5)`, where `xx` is "
-"some other ID, it is indicative of the connection problem with ADXL345, or "
-"the faulty sensor. Double-check the power, the wiring (that it matches the "
-"schematics, no wire is broken or loose, etc.), and soldering quality."
-msgstr ""
-"Se ricevi un errore come `Invalid adxl345 id (got xx vs e5)`, dove `xx` è un"
-" altro ID, è indicativo del problema di connessione con ADXL345 o del "
-"sensore difettoso. Ricontrolla l'alimentazione, il cablaggio (che "
-"corrisponda agli schemi, nessun filo è rotto o allentato, ecc.) e la qualità"
-" delle saldature."
-
-msgid ""
 "Next, try running `MEASURE_AXES_NOISE` in Octoprint, you should get some "
 "baseline numbers for the noise of accelerometer on the axes (should be "
 "somewhere in the range of ~1-100). Too high axes noise (e.g. 1000 and more) "
@@ -321,17 +301,6 @@ msgstr ""
 "generati: i picchi nella densità spettrale di potenza sui grafici "
 "corrispondono alle frequenze di risonanza della stampante."
 
-msgid ""
-"Note that alternatively you can run the input shaper autocalibration from "
-"Klipper [directly](#input-shaper-auto-calibration), which can be convenient,"
-" for example, for the input shaper [re-calibration](#input-shaper-re-"
-"calibration)."
-msgstr ""
-"Nota che in alternativa puoi eseguire l'autocalibrazione dello input shaper "
-"da Klipper [directly](#input-shaper-auto-calibration), che può essere "
-"conveniente, ad esempio, per lo input shaper[re-calibration](#input-shaper-"
-"re-calibrazione)."
-
 msgid "Bed-slinger printers"
 msgstr "Stampanti con piatto scorrevole"
 
@@ -383,8 +352,8 @@ msgstr ""
 "parti. La regolazione automatica del input shaper eseguita dallo script "
 "`calibrate_shaper.py` o dal comando `SHAPER_CALIBRATE` cercano di non "
 "esacerbare lo smoothing, ma allo stesso tempo cercano di ridurre al minimo "
-"le vibrazioni risultanti. A volte possono fare una scelta non ottimale della "
-"frequenza dello shaper, o forse semplicemente preferisci avere meno "
+"le vibrazioni risultanti. A volte possono fare una scelta non ottimale della"
+" frequenza dello shaper, o forse semplicemente preferisci avere meno "
 "smoothing in alcune parti a scapito di maggiori vibrazioni residue. In "
 "questi casi è possibile richiedere di limitare lo smoothing massimo dal "
 "input shaper."
@@ -404,8 +373,8 @@ msgid ""
 "`square_corner_velocity` parameters. Therefore, you should print some test "
 "prints to see how much smoothing exactly a chosen configuration creates."
 msgstr ""
-"Si noti che i valori di `smoothing` riportati sono alcuni valori proiettati. "
-"Questi valori possono essere utilizzati per confrontare diverse "
+"Si noti che i valori di `smoothing` riportati sono alcuni valori proiettati."
+" Questi valori possono essere utilizzati per confrontare diverse "
 "configurazioni: maggiore è il valore, maggiore sarà la levigatura creata da "
 "uno shaper. Tuttavia, questi punteggi di smoothing non rappresentano alcuna "
 "misura reale dello smoothing, perché lo smoothing effettivo dipende dai "
@@ -418,16 +387,16 @@ msgid ""
 "if you want to get less smoothing on the X axis? You can try to limit the "
 "maximum shaper smoothing using the following command:"
 msgstr ""
-"Nell'esempio sopra i parametri dello shaper suggeriti non sono male, ma cosa "
-"succede se si desidera ottenere meno smooting sull'asse X? Puoi provare a "
+"Nell'esempio sopra i parametri dello shaper suggeriti non sono male, ma cosa"
+" succede se si desidera ottenere meno smooting sull'asse X? Puoi provare a "
 "limitare lo smoothing massimo dello shaper usando il seguente comando:"
 
 msgid ""
 "which limits the smoothing to 0.2 score. Now you can get the following "
 "result:"
 msgstr ""
-"che limita lo smoothing a un punteggio di 0.2. Ora puoi ottenere il seguente "
-"risultato:"
+"che limita lo smoothing a un punteggio di 0.2. Ora puoi ottenere il seguente"
+" risultato:"
 
 msgid "![Resonances](img/calibrate-x-max-smoothing.png)"
 msgstr "![Resonances](img/calibrate-x-max-smoothing.png)"
@@ -460,11 +429,11 @@ msgstr ""
 "dall'input shaper dipende principalmente dalla frequenza di risonanza più "
 "bassa della stampante: maggiore è la frequenza della risonanza più bassa, "
 "minore è lo smoothing. Pertanto, se si richiede allo script di trovare una "
-"configurazione dell'input shaper con lo smoothing irrealisticamente piccolo, "
-"sarà a scapito di un aumento del ringing alle frequenze di risonanza più "
+"configurazione dell'input shaper con lo smoothing irrealisticamente piccolo,"
+" sarà a scapito di un aumento del ringing alle frequenze di risonanza più "
 "basse (che sono, in genere, anche più visibili nelle stampe). Quindi, "
-"ricontrolla sempre le vibrazioni rimanenti previste riportate dallo script e "
-"assicurati che non siano troppo alte."
+"ricontrolla sempre le vibrazioni rimanenti previste riportate dallo script e"
+" assicurati che non siano troppo alte."
 
 msgid ""
 "Note that if you chose a good `max_smoothing` value for both of your axes, "
@@ -501,19 +470,19 @@ msgid ""
 "margin."
 msgstr ""
 "Poiché l'input shaper può creare un po' di smussamento nelle parti, "
-"specialmente ad accelerazioni elevate, sarà comunque necessario scegliere il "
-"valore `max_accel` che non crei troppo smussamento \"smoothing\" nelle parti "
-"stampate. Uno script di calibrazione fornisce una stima per il parametro "
-"`max_accel` che non dovrebbe creare un smoothing eccessivo. Si noti che il "
-"`max_accel` visualizzato dallo script di calibrazione è solo un massimo "
-"teorico al quale il rispettivo shaper è ancora in grado di lavorare senza "
-"produrre troppo smoothing. Non è affatto una raccomandazione impostare "
-"questa accelerazione per la stampa. L'accelerazione massima che la stampante "
-"è in grado di sostenere dipende dalle sue proprietà meccaniche e dalla "
-"coppia massima dei motori passo-passo utilizzati. Pertanto, si suggerisce di "
-"impostare `max_accel` nella sezione `[printer]` che non superi i valori "
-"stimati per gli assi X e Y, probabilmente con un margine di sicurezza "
-"conservativo."
+"specialmente ad accelerazioni elevate, sarà comunque necessario scegliere il"
+" valore `max_accel` che non crei troppo smussamento \"smoothing\" nelle "
+"parti stampate. Uno script di calibrazione fornisce una stima per il "
+"parametro `max_accel` che non dovrebbe creare un smoothing eccessivo. Si "
+"noti che il `max_accel` visualizzato dallo script di calibrazione è solo un "
+"massimo teorico al quale il rispettivo shaper è ancora in grado di lavorare "
+"senza produrre troppo smoothing. Non è affatto una raccomandazione impostare"
+" questa accelerazione per la stampa. L'accelerazione massima che la "
+"stampante è in grado di sostenere dipende dalle sue proprietà meccaniche e "
+"dalla coppia massima dei motori passo-passo utilizzati. Pertanto, si "
+"suggerisce di impostare `max_accel` nella sezione `[printer]` che non superi"
+" i valori stimati per gli assi X e Y, probabilmente con un margine di "
+"sicurezza conservativo."
 
 msgid ""
 "Alternatively, follow [this](Resonance_Compensation.md#selecting-max_accel) "
@@ -624,28 +593,6 @@ msgstr ""
 "possibile eseguire nuovamente la calibrazione completa utilizzando il "
 "comando `SHAPER_CALIBRATE`, o limitare l'autocalibrazione a un singolo asse "
 "fornendo il parametro `AXIS=`, come"
-
-msgid ""
-"**Warning!** It is not advisable to run the shaper autocalibration very "
-"frequently (e.g. before every print, or every day). In order to determine "
-"resonance frequencies, autocalibration creates intensive vibrations on each "
-"of the axes. Generally, 3D printers are not designed to withstand a "
-"prolonged exposure to vibrations near the resonance frequencies. Doing so "
-"may increase wear of the printer components and reduce their lifespan. There"
-" is also an increased risk of some parts unscrewing or becoming loose. "
-"Always check that all parts of the printer (including the ones that may "
-"normally not move) are securely fixed in place after each auto-tuning."
-msgstr ""
-"**Attenzione!** Non è consigliabile eseguire l'autocalibrazione dello shaper"
-" molto frequentemente (ad es. prima di ogni stampa o ogni giorno). Per "
-"determinare le frequenze di risonanza, l'autocalibrazione crea intense "
-"vibrazioni su ciascuno degli assi. Generalmente, le stampanti 3D non sono "
-"progettate per resistere a un'esposizione prolungata a vibrazioni vicino "
-"alle frequenze di risonanza. Ciò potrebbe aumentare l'usura dei componenti "
-"della stampante e ridurne la durata. C'è anche un aumento del rischio che "
-"alcune parti si svitino o si allentino. Verificare sempre che tutte le parti"
-" della stampante (comprese quelle che normalmente potrebbero non muoversi) "
-"siano fissate saldamente in posizione dopo ogni autotuning."
 
 msgid ""
 "Also, due to some noise in measurements, it is possible that the tuning "
@@ -1162,16 +1109,6 @@ msgstr ""
 "scrivere il file di output. Fare riferimento a [G-Codes](G-Codes.md#adxl345)"
 " per maggiori dettagli."
 
-#: docs/Measuring_Resonances.md:block 8 (paragraph)
-msgid ""
-"An alternative to the ADXL345 is the MPU-9250 (or MPU-6050). This "
-"accelerometer has been tested to work over I2C on the RPi at 400kbaud. "
-"Recommended connection scheme for I2C:"
-msgstr ""
-"Un'alternativa all'ADXL345 è l'MPU-9250 (o MPU-6050). Questo accelerometro è"
-" stato testato per funzionare su I2C su RPi a 400kbaud. Schema di "
-"connessione consigliato per I2C:"
-
 #: docs/Measuring_Resonances.md:block 9 (table)
 msgid "MPU-9250 pin"
 msgstr "pin MPU-9250"
@@ -1233,22 +1170,6 @@ msgstr ""
 "dell'installazione. In alcune occasioni, se la scheda ha poca RAM, "
 "l'installazione potrebbe non riuscire e sarà necessario abilitare la swap."
 
-#: docs/Measuring_Resonances.md:block 27 (paragraph)
-msgid "For the ADXL345, add the following to the printer.cfg file:"
-msgstr "Per ADXL345, aggiungere quanto segue al file printer.cfg:"
-
-#: docs/Measuring_Resonances.md:block 30 (paragraph)
-msgid ""
-"For the MPU-9250, make sure the Linux I2C driver is enabled and the baud "
-"rate is set to 400000 (see [Enabling I2C](RPi_microcontroller.md#optional-"
-"enabling-i2c) section for more details). Then, add the following to the "
-"printer.cfg:"
-msgstr ""
-"Per l'MPU-9250, assicurarsi che il driver Linux I2C sia abilitato e che la "
-"velocità di trasmissione sia impostata su 400000 (consultare la sezione "
-"[Abilitazione di I2C](RPi_microcontroller.md#optional-enbling-i2c) per "
-"maggiori dettagli). Quindi, aggiungi quanto segue a printer.cfg:"
-
 #: docs/Measuring_Resonances.md:block 31 (code)
 msgid ""
 "[mcu rpi]\n"
@@ -1275,6 +1196,513 @@ msgstr ""
 "probe_points:\n"
 "    100, 100, 20  # un esempio\n"
 
+#: docs/Measuring_Resonances.md:block 7 (paragraph)
+msgid "Connect ethernet cable shielding to the controller board/RPI ground."
+msgstr ""
+"Collegare la schermatura del cavo Ethernet al gnd/ground della scheda "
+"controller RPI."
+
+#: docs/Measuring_Resonances.md:block 8 (paragraph)
+msgid ""
+"***Double-check your wiring before powering up to prevent damaging your "
+"MCU/Raspberry Pi or the accelerometer.***"
+msgstr ""
+"***Ricontrolla il cablaggio prima di accendere per evitare di danneggiare il"
+" tuo MCU/Raspberry Pi o l'accelerometro.***"
+
+#: docs/Measuring_Resonances.md:block 9 (header)
+msgid "SPI Accelerometers"
+msgstr "Accelerometri SPI"
+
+#: docs/Measuring_Resonances.md:block 10 (paragraph)
+msgid "Suggested twisted pair order:"
+msgstr "Ordine dei doppini intrecciati suggerito:"
+
+#: docs/Measuring_Resonances.md:block 11 (code)
+msgid ""
+"GND+MISO\n"
+"3.3V+MOSI\n"
+"SCLK+CS\n"
+msgstr ""
+"GND+MISO\n"
+"3.3V+MOSI\n"
+"SCLK+CS\n"
+
+#: docs/Measuring_Resonances.md:block 12 (header)
+msgid "ADXL345"
+msgstr "ADXL345"
+
+#: docs/Measuring_Resonances.md:block 18 (header)
+msgid "I2C Accelerometers"
+msgstr "Accelerometri I2C"
+
+#: docs/Measuring_Resonances.md:block 20 (code)
+msgid ""
+"3.3V+SDA\n"
+"GND+SCL\n"
+msgstr ""
+"3.3V+SDA\n"
+"GND+SCL\n"
+
+#: docs/Measuring_Resonances.md:block 21 (header)
+msgid "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500"
+msgstr "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500"
+
+#: docs/Measuring_Resonances.md:block 22 (paragraph)
+msgid ""
+"Alternatives to the ADXL345 are "
+"MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500. These accelerometers have been"
+" tested to work over I2C on the RPi or RP2040(pico) at 400kbaud."
+msgstr ""
+"Le alternative all'ADXL345 sono "
+"MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500. Questi accelerometri sono "
+"stati testati per funzionare su I2C su RPi o RP2040(pico) a 400kbaud."
+
+#: docs/Measuring_Resonances.md:block 23 (paragraph)
+msgid "Recommended connection scheme for I2C on the Raspberry Pi:"
+msgstr "Schema di connessione consigliato per I2C su Raspberry Pi:"
+
+#: docs/Measuring_Resonances.md:block 24 (table)
+msgid "VCC"
+msgstr "VCC"
+
+#: docs/Measuring_Resonances.md:block 25 (paragraph)
+msgid "![MPU-9250 connected to RPI](img/mpu9250-PI-fritzing.png)"
+msgstr "![MPU-9250 Connesso a RPI](img/mpu9250-PI-fritzing.png)"
+
+#: docs/Measuring_Resonances.md:block 26 (paragraph)
+msgid "Recommended connection scheme for I2C(i2c0a) on the RP2040:"
+msgstr "Schema di connessione consigliato per I2C(i2c0a) su RP2040:"
+
+#: docs/Measuring_Resonances.md:block 27 (table)
+msgid "RP2040 pin"
+msgstr "pin RP2040"
+
+#: docs/Measuring_Resonances.md:block 27 (table)
+msgid "39"
+msgstr "39"
+
+#: docs/Measuring_Resonances.md:block 27 (table)
+msgid "3v3"
+msgstr "3v3"
+
+#: docs/Measuring_Resonances.md:block 27 (table)
+msgid "38"
+msgstr "38"
+
+#: docs/Measuring_Resonances.md:block 27 (table)
+msgid "GP0 (I2C0 SDA)"
+msgstr "GP0 (I2C0 SDA)"
+
+#: docs/Measuring_Resonances.md:block 27 (table)
+msgid "02"
+msgstr "02"
+
+#: docs/Measuring_Resonances.md:block 27 (table)
+msgid "GP1 (I2C0 SCL)"
+msgstr "GP1 (I2C0 SCL)"
+
+#: docs/Measuring_Resonances.md:block 28 (paragraph)
+msgid "![MPU-9250 connected to PICO](img/mpu9250-PICO-fritzing.png)"
+msgstr "![MPU-9250 collegato a PICO](img/mpu9250-PICO-fritzing.png)"
+
+#: docs/Measuring_Resonances.md:block 42 (header)
+msgid "Configure ADXL345 With RPi"
+msgstr "Configura ADXL345 con RPi"
+
+#: docs/Measuring_Resonances.md:block 44 (paragraph)
+msgid "Add the following to the printer.cfg file:"
+msgstr "Aggiungere quanto segue al file printer.cfg:"
+
+#: docs/Measuring_Resonances.md:block 47 (header)
+msgid "Configure MPU-6000/9000 series With RPi"
+msgstr "Configura la serie MPU-6000/9000 con RPi"
+
+#: docs/Measuring_Resonances.md:block 48 (paragraph)
+msgid ""
+"Make sure the Linux I2C driver is enabled and the baud rate is set to 400000"
+" (see [Enabling I2C](RPi_microcontroller.md#optional-enabling-i2c) section "
+"for more details). Then, add the following to the printer.cfg:"
+msgstr ""
+"Assicurati che il driver Linux I2C sia abilitato e che la velocità di "
+"trasmissione sia impostata su 400000 (consulta la sezione [Abilitazione di "
+"I2C](RPi_microcontroller.md#optional-enabling-i2c) per ulteriori dettagli). "
+"Quindi, aggiungi quanto segue a printer.cfg:"
+
+#: docs/Measuring_Resonances.md:block 50 (header)
+msgid "Configure MPU-6000/9000 series With PICO"
+msgstr "Configura la serie MPU-6000/9000 con PICO"
+
+#: docs/Measuring_Resonances.md:block 51 (paragraph)
+msgid ""
+"PICO I2C is set to 400000 on default. Simply add the following to the "
+"printer.cfg:"
+msgstr ""
+"PICO I2C è impostato su 400000 per impostazione predefinita. Aggiungi "
+"semplicemente quanto segue a printer.cfg:"
+
+#: docs/Measuring_Resonances.md:block 61 (paragraph)
+msgid ""
+"**If you are using MPU-6000/9000 series accelerometer and it show up as "
+"`mpu-unknown`, use with caution! They are probably refurbished chips!**"
+msgstr ""
+"**Se si utilizza l'accelerometro della serie MPU-6000/9000 e viene "
+"visualizzato come `mpu-unknown`, utilizzare con cautela! Probabilmente sono "
+"chip ricondizionati!**"
+
+#: docs/Measuring_Resonances.md:block 6 (paragraph)
+msgid ""
+"An ethernet cable with shielded twisted pairs (cat5e or better) is "
+"recommended for signal integrity over a long distance. If you still "
+"experience signal integrity issues (SPI/I2C errors), shorten the cable."
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 13 (header)
+msgid "Direct to Raspberry Pi"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 14 (paragraph)
+msgid ""
+"**Note: Many MCUs will work with an ADXL345 in SPI mode(eg Pi Pico), wiring "
+"and configuration will vary according to your specific board and available "
+"pins.**"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 16 (table)
+msgid "3.3V DC power"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 19 (header)
+msgid "Using Raspberry Pi Pico"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 20 (paragraph)
+msgid ""
+"You may connect the ADXL345 to your Raspberry Pi Pico and then connect the "
+"Pico to your Raspberry Pi via USB. This makes it easy to reuse the "
+"accelerometer on other Klipper devices, as you can connect via USB instead "
+"of GPIO. The Pico does not have much processing power, so make sure it is "
+"only running the accelerometer and not performing any other duties."
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 21 (paragraph)
+msgid ""
+"In order to avoid damage to your RPi make sure to connect the ADXL345 to "
+"3.3V only. Depending on the board's layout, a level shifter may be present, "
+"which makes 5V dangerous for your RPi."
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "Pico pin"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "Pico pin name"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "36"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "2"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "GP1 (SPI0_CSn)"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "1"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "GP0 (SPI0_RX)"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "5"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "GP3 (SPI0_TX)"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "4"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 22 (table)
+msgid "GP2 (SPI0_SCK)"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 23 (paragraph)
+msgid "Wiring diagrams for some of the ADXL345 boards:"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 24 (paragraph)
+msgid "![ADXL345-Pico](img/adxl345-pico.png)"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 54 (header)
+msgid "Configure ADXL345 With Pi Pico"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 55 (header)
+msgid "Flash the Pico Firmware"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 56 (paragraph)
+msgid "On your Raspberry Pi, compile the firmware for the Pico."
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 57 (code)
+msgid ""
+"cd ~/klipper\n"
+"make clean\n"
+"make menuconfig\n"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 58 (paragraph)
+msgid "![Pico menuconfig](img/klipper_pico_menuconfig.png)"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 59 (paragraph)
+msgid ""
+"Now, while holding down the `BOOTSEL` button on the Pico, connect the Pico "
+"to the Raspberry Pi via USB. Compile and flash the firmware."
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 60 (code)
+msgid "make flash FLASH_DEVICE=first\n"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 61 (paragraph)
+msgid ""
+"If that fails, you will be told which `FLASH_DEVICE` to use. In this "
+"example, that's `make flash FLASH_DEVICE=2e8a:0003`. ![Determine flash "
+"device](img/flash_rp2040_FLASH_DEVICE.png)"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 62 (header)
+msgid "Configure the Connection"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 63 (paragraph)
+msgid ""
+"The Pico will now reboot with the new firmware and should show up as a "
+"serial device. Find the pico serial device with `ls /dev/serial/by-id/*`. "
+"You can now add an `adxl.cfg` file with the following settings:"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 64 (code)
+msgid ""
+"[mcu adxl]\n"
+"# Change <mySerial> to whatever you found above. For example,\n"
+"# usb-Klipper_rp2040_E661640843545B2E-if00\n"
+"serial: /dev/serial/by-id/usb-Klipper_rp2040_<mySerial>\n"
+"\n"
+"[adxl345]\n"
+"cs_pin: adxl:gpio1\n"
+"spi_bus: spi0a\n"
+"axes_map: x,z,y\n"
+"\n"
+"[resonance_tester]\n"
+"accel_chip: adxl345\n"
+"probe_points:\n"
+"    # Somewhere slightly above the middle of your print bed\n"
+"    147,154, 20\n"
+"\n"
+"[output_pin power_mode] # Improve power stability\n"
+"pin: adxl:gpio23\n"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 65 (paragraph)
+msgid ""
+"If setting up the ADXL345 configuration in a separate file, as shown above, "
+"you'll also want to modify your `printer.cfg` file to include this:"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 66 (code)
+msgid ""
+"[include adxl.cfg] # Comment this out when you disconnect the "
+"accelerometer\n"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 73 (code)
+msgid ""
+"[mcu pico]\n"
+"serial: /dev/serial/by-id/<your PICO's serial ID>\n"
+"\n"
+"[mpu9250]\n"
+"i2c_mcu: pico\n"
+"i2c_bus: i2c0a\n"
+"\n"
+"[resonance_tester]\n"
+"accel_chip: mpu9250\n"
+"probe_points:\n"
+"    100, 100, 20  # an example\n"
+"\n"
+"[static_digital_output pico_3V3pwm] # Improve power stability\n"
+"pin: pico:gpio23\n"
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 81 (paragraph)
+msgid ""
+"If you get an error like `Invalid adxl345 id (got xx vs e5)`, where `xx` is "
+"some other ID, immediately try again. There's an issue with SPI "
+"initialization. If you still get an error, it is indicative of the "
+"connection problem with ADXL345, or the faulty sensor. Double-check the "
+"power, the wiring (that it matches the schematics, no wire is broken or "
+"loose, etc.), and soldering quality."
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 100 (paragraph)
+msgid ""
+"Note that alternatively you can run the input shaper auto-calibration from "
+"Klipper [directly](#input-shaper-auto-calibration), which can be convenient,"
+" for example, for the input shaper [re-calibration](#input-shaper-re-"
+"calibration)."
+msgstr ""
+
+#: docs/Measuring_Resonances.md:block 152 (paragraph)
+msgid ""
+"**Warning!** It is not advisable to run the shaper auto-calibration very "
+"frequently (e.g. before every print, or every day). In order to determine "
+"resonance frequencies, auto-calibration creates intensive vibrations on each"
+" of the axes. Generally, 3D printers are not designed to withstand a "
+"prolonged exposure to vibrations near the resonance frequencies. Doing so "
+"may increase wear of the printer components and reduce their lifespan. There"
+" is also an increased risk of some parts unscrewing or becoming loose. "
+"Always check that all parts of the printer (including the ones that may "
+"normally not move) are securely fixed in place after each auto-tuning."
+msgstr ""
+
+#~ msgid ""
+#~ "If you get an error like `Invalid adxl345 id (got xx vs e5)`, where `xx` is "
+#~ "some other ID, it is indicative of the connection problem with ADXL345, or "
+#~ "the faulty sensor. Double-check the power, the wiring (that it matches the "
+#~ "schematics, no wire is broken or loose, etc.), and soldering quality."
+#~ msgstr ""
+#~ "Se ricevi un errore come `Invalid adxl345 id (got xx vs e5)`, dove `xx` è un"
+#~ " altro ID, è indicativo del problema di connessione con ADXL345 o del "
+#~ "sensore difettoso. Ricontrolla l'alimentazione, il cablaggio (che "
+#~ "corrisponda agli schemi, nessun filo è rotto o allentato, ecc.) e la qualità"
+#~ " delle saldature."
+
+#~ msgid ""
+#~ "Note that alternatively you can run the input shaper autocalibration from "
+#~ "Klipper [directly](#input-shaper-auto-calibration), which can be convenient,"
+#~ " for example, for the input shaper [re-calibration](#input-shaper-re-"
+#~ "calibration)."
+#~ msgstr ""
+#~ "Nota che in alternativa puoi eseguire l'autocalibrazione dello input shaper "
+#~ "da Klipper [directly](#input-shaper-auto-calibration), che può essere "
+#~ "conveniente, ad esempio, per lo input shaper[re-calibration](#input-shaper-"
+#~ "re-calibrazione)."
+
+#~ msgid ""
+#~ "**Warning!** It is not advisable to run the shaper autocalibration very "
+#~ "frequently (e.g. before every print, or every day). In order to determine "
+#~ "resonance frequencies, autocalibration creates intensive vibrations on each "
+#~ "of the axes. Generally, 3D printers are not designed to withstand a "
+#~ "prolonged exposure to vibrations near the resonance frequencies. Doing so "
+#~ "may increase wear of the printer components and reduce their lifespan. There"
+#~ " is also an increased risk of some parts unscrewing or becoming loose. "
+#~ "Always check that all parts of the printer (including the ones that may "
+#~ "normally not move) are securely fixed in place after each auto-tuning."
+#~ msgstr ""
+#~ "**Attenzione!** Non è consigliabile eseguire l'autocalibrazione dello shaper"
+#~ " molto frequentemente (ad es. prima di ogni stampa o ogni giorno). Per "
+#~ "determinare le frequenze di risonanza, l'autocalibrazione crea intense "
+#~ "vibrazioni su ciascuno degli assi. Generalmente, le stampanti 3D non sono "
+#~ "progettate per resistere a un'esposizione prolungata a vibrazioni vicino "
+#~ "alle frequenze di risonanza. Ciò potrebbe aumentare l'usura dei componenti "
+#~ "della stampante e ridurne la durata. C'è anche un aumento del rischio che "
+#~ "alcune parti si svitino o si allentino. Verificare sempre che tutte le parti"
+#~ " della stampante (comprese quelle che normalmente potrebbero non muoversi) "
+#~ "siano fissate saldamente in posizione dopo ogni autotuning."
+
+#~ msgid ""
+#~ "An ethernet cable with shielded twisted pairs (cat5e or better) is "
+#~ "recommended for signal integrety over a long distance. If you still "
+#~ "experience signal integrity issues (SPI/I2C errors), shorten the cable."
+#~ msgstr ""
+#~ "Si consiglia un cavo Ethernet con doppini intrecciati schermati (cat5e o "
+#~ "superiore) per l'integrità del segnale su lunghe distanze. Se si verificano "
+#~ "ancora problemi di integrità del segnale (errori SPI/I2C), accorciare il "
+#~ "cavo."
+
+#~ msgid ""
+#~ "**Note: Many MCUs will work with an ADXL345 in SPI mode(eg Pi Pico), wiring "
+#~ "and configuration will vary according to your specific board and avaliable "
+#~ "pins.**"
+#~ msgstr ""
+#~ "**Nota: molti MCU funzionano con un ADXL345 in modalità SPI (ad es. Pi "
+#~ "Pico), il cablaggio e la configurazione variano in base alla scheda "
+#~ "specifica ed ai pin disponibili.**"
+
+#~ msgid ""
+#~ "[mcu pico]\n"
+#~ "serial: /dev/serial/by-id/<your PICO's serial ID>\n"
+#~ "\n"
+#~ "[mpu9250]\n"
+#~ "i2c_mcu: pico\n"
+#~ "i2c_bus: i2c1a\n"
+#~ "\n"
+#~ "[resonance_tester]\n"
+#~ "accel_chip: mpu9250\n"
+#~ "probe_points:\n"
+#~ "    100, 100, 20  # an example\n"
+#~ "\n"
+#~ "[static_digital_output pico_3V3pwm] # Improve power stability\n"
+#~ "pin: pico:gpio23\n"
+#~ msgstr ""
+#~ "[mcu pico]\n"
+#~ "serial: /dev/serial/by-id/<ID seriale del tuo PICO>\n"
+#~ "\n"
+#~ "[mpu9250]\n"
+#~ "i2c_mcu: pico\n"
+#~ "i2c_bus: i2c1a\n"
+#~ "\n"
+#~ "[resonance_tester]\n"
+#~ "accel_chip: mpu9250\n"
+#~ "probe_points:\n"
+#~ "    100, 100, 20  # un esempio\n"
+#~ "\n"
+#~ "[static_digital_output pico_3V3pwm] # Aumenta la stabilità\n"
+#~ "pin:pico:gpio23\n"
+
+#~ msgid ""
+#~ "Double-check your wiring before powering up the Raspberry Pi to prevent "
+#~ "damaging it or the accelerometer."
+#~ msgstr ""
+#~ "Ricontrolla il cablaggio prima di accendere il Raspberry Pi per evitare di "
+#~ "danneggiare RPi o l'accelerometro."
+
+#~ msgid ""
+#~ "An alternative to the ADXL345 is the MPU-9250 (or MPU-6050). This "
+#~ "accelerometer has been tested to work over I2C on the RPi at 400kbaud. "
+#~ "Recommended connection scheme for I2C:"
+#~ msgstr ""
+#~ "Un'alternativa all'ADXL345 è l'MPU-9250 (o MPU-6050). Questo accelerometro è"
+#~ " stato testato per funzionare su I2C su RPi a 400kbaud. Schema di "
+#~ "connessione consigliato per I2C:"
+
+#~ msgid "For the ADXL345, add the following to the printer.cfg file:"
+#~ msgstr "Per ADXL345, aggiungere quanto segue al file printer.cfg:"
+
+#~ msgid ""
+#~ "For the MPU-9250, make sure the Linux I2C driver is enabled and the baud "
+#~ "rate is set to 400000 (see [Enabling I2C](RPi_microcontroller.md#optional-"
+#~ "enabling-i2c) section for more details). Then, add the following to the "
+#~ "printer.cfg:"
+#~ msgstr ""
+#~ "Per l'MPU-9250, assicurarsi che il driver Linux I2C sia abilitato e che la "
+#~ "velocità di trasmissione sia impostata su 400000 (consultare la sezione "
+#~ "[Abilitazione di I2C](RPi_microcontroller.md#optional-enbling-i2c) per "
+#~ "maggiori dettagli). Quindi, aggiungi quanto segue a printer.cfg:"
+
 #~ msgid ""
 #~ "Note that resonance measurements and shaper auto-calibration require "
 #~ "additional software dependencies not installed by default. First, you will "
@@ -1286,9 +1714,6 @@ msgstr ""
 #~ "CPU, it may take *a lot* of time, up to 10-20 minutes. Be patient and wait "
 #~ "for the completion of the installation. On some occasions, if the board has "
 #~ "too little RAM, the installation may fail and you will need to enable swap."
-#~ msgstr ""
-
-#~ msgid "Add the following to the printer.cfg file:"
 #~ msgstr ""
 
 #~ msgid ""

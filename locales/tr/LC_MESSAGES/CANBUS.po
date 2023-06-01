@@ -1,20 +1,31 @@
-#
+# Ezber Bozan <mapperiz.biz@gmail.com>, 2022.
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2022-12-17 15:52+0000\n"
+"Last-Translator: Ezber Bozan <mapperiz.biz@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/klipper/canbus/tr/>\n"
+"Language: tr\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 msgid "This document describes Klipper's CAN bus support."
-msgstr ""
+msgstr "Bu belge Klipper'ın CAN bus'a desteğini açıklar."
 
 msgid "Device Hardware"
-msgstr ""
+msgstr "Cihaz Donanımı"
 
 msgid "Host Hardware"
-msgstr ""
+msgstr "Ana Bilgisayar Donanımı"
 
 msgid ""
 "In order to use a CAN bus, it is necessary to have a host adapter. There are"
 " currently two common options:"
 msgstr ""
+"Bir CAN bus kullanmak için ana bilgisay adaptörü lazımdır. Şu anda 2 sıradan"
+" seçenek vardır:"
 
 msgid ""
 "Use a [Waveshare Raspberry Pi CAN hat](https://www.waveshare.com/rs485-can-"
@@ -165,12 +176,6 @@ msgid ""
 " is ignored."
 msgstr ""
 
-#: docs/CANBUS.md:block 4 (paragraph)
-msgid ""
-"Klipper currently supports CAN on stm32 and rp2040 chips. In addition, the "
-"micro-controller chip must be on a board that has a CAN transceiver."
-msgstr ""
-
 #: docs/CANBUS.md:block 20 (code)
 msgid "Found canbus_uuid=11aa22bb33cc, Application: Klipper\n"
 msgstr ""
@@ -190,6 +195,18 @@ msgid ""
 "    bitrate 500000\n"
 "    up ifconfig $IFACE txqueuelen 128\n"
 msgstr ""
+
+#: docs/CANBUS.md:block 4 (paragraph)
+msgid ""
+"Klipper currently supports CAN on stm32, same5x, and rp2040 chips. In "
+"addition, the micro-controller chip must be on a board that has a CAN "
+"transceiver."
+msgstr ""
+
+#~ msgid ""
+#~ "Klipper currently supports CAN on stm32 and rp2040 chips. In addition, the "
+#~ "micro-controller chip must be on a board that has a CAN transceiver."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Klipper currently only supports CAN on stm32 chips. In addition, the micro-"

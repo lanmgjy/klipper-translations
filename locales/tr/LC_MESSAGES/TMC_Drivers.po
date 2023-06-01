@@ -1,11 +1,22 @@
-#
+# Kaan Özbilek <info@kaanozbilek.com>, 2023.
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr ""
+"Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
+"PO-Revision-Date: 2023-01-10 15:50+0000\n"
+"Last-Translator: Kaan Özbilek <info@kaanozbilek.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/klipper/tmc_drivers/tr/>\n"
+"Language: tr\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 msgid ""
 "This document provides information on using Trinamic stepper motor drivers "
 "in SPI/UART mode on Klipper."
 msgstr ""
+"Bu doküman, Trinamic step motor sürücülerinin Klipper üzerinde SPI/UART "
+"modunda kullanılması hakkında bilgi vermektedir."
 
 msgid ""
 "Klipper can also use Trinamic drivers in their \"standalone mode\". However,"
@@ -13,14 +24,21 @@ msgid ""
 "needed and the advanced Klipper features discussed in this document are not "
 "available."
 msgstr ""
+"Klipper, Trinamic sürücülerini \"standalone (bağımsız) modda\"da "
+"kullanabilir. Sürücüler için bu moddayken herhangi bir özel Klipper "
+"yapılandırması gerekmez ancak bu belgede açıklanan gelişmiş Klipper "
+"özellikleri kullanılamazsınız."
 
 msgid ""
 "In addition to this document, be sure to review the [TMC driver config "
 "reference](Config_Reference.md#tmc-stepper-driver-configuration)."
 msgstr ""
+"Bu dokümana ek olarak, [TMC sürücü yapılandırma "
+"referansını](Config_Reference.md#tmc-stepper-driver-configuration) gözden "
+"geçirdiğinizden emin olun."
 
 msgid "Sensorless Homing"
-msgstr ""
+msgstr "Sensörsüz Yatak Sıfırlama"
 
 msgid ""
 "Sensorless homing allows to home an axis without the need for a physical "
@@ -563,10 +581,6 @@ msgid ""
 "motor."
 msgstr ""
 
-#: docs/TMC_Drivers.md:block 94 (header)
-msgid "TMC reports error: `... ShortToGND` OR `LowSideShort`"
-msgstr ""
-
 #: docs/TMC_Drivers.md:block 95 (paragraph)
 msgid ""
 "This indicates the driver has disabled itself because it detected very high "
@@ -805,6 +819,13 @@ msgid ""
 "    G28 X0\n"
 "    G1 X5 F1200\n"
 msgstr ""
+
+#: docs/TMC_Drivers.md:block 110 (header)
+msgid "TMC reports error: `... ShortToGND` OR `ShortToSupply`"
+msgstr ""
+
+#~ msgid "TMC reports error: `... ShortToGND` OR `LowSideShort`"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Then issue a `G28 X0` command and verify the axis does not move at all. If "

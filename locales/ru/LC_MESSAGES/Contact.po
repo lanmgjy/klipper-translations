@@ -1,15 +1,16 @@
 # Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>, 2022.
+# Evgeniy Khramov <thejenjagamertjg@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-09-16 16:17+0000\n"
-"Last-Translator: Дмитрий Васильевич Григорьевский <gr.dmitriy@gmail.com>\n"
+"PO-Revision-Date: 2022-12-07 05:47+0000\n"
+"Last-Translator: Evgeniy Khramov <thejenjagamertjg@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipper/contact/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 msgid "This document provides contact information for Klipper."
 msgstr "В этом документе содержится контактная информация Klipper."
@@ -30,16 +31,11 @@ msgid "[Help! It doesn't work!](#help-it-doesnt-work)"
 msgstr "[Помогите! Это не работает!](#help-it-doesnt-work)"
 
 msgid ""
-"[I have diagnosed a defect in the Klipper software](#i-have-diagnosed-a-"
-"defect-in-the-klipper-software)"
-msgstr ""
-"[Я диагностировал дефект в программном обеспечении Klipper](#i-have-"
-"diagnosed-a-defect-in-the-klipper-software)"
-
-msgid ""
 "[I am making changes that I'd like to include in Klipper](#i-am-making-"
 "changes-that-id-like-to-include-in-klipper)"
 msgstr ""
+"[Я вношу изменения, которые хотел бы включить в Klipper](#i-am-making-"
+"changes-that-id-like-to-include-in-klipper)"
 
 msgid "Community Forum"
 msgstr ""
@@ -48,6 +44,8 @@ msgid ""
 "There is a [Klipper Community Discourse "
 "server](https://community.klipper3d.org) for discussions on Klipper."
 msgstr ""
+"Существует [Klipper Community Discourse "
+"server](https://community.klipper3d.org) для обсуждения Клиппера."
 
 msgid "Discord Chat"
 msgstr ""
@@ -57,9 +55,12 @@ msgid ""
 "discussions on Klipper. It allows users to chat with other users in real-"
 "time."
 msgstr ""
+"Этот сервер управляется сообществом энтузиастов Клиппера, посвященным "
+"обсуждениям Клиппера. Он позволяет пользователям общаться с другими "
+"пользователями в режиме реального времени."
 
 msgid "I have a question about Klipper"
-msgstr ""
+msgstr "У меня есть вопрос о Клиппере"
 
 msgid ""
 "Many questions we receive are already answered in the [Klipper "
@@ -78,6 +79,11 @@ msgid ""
 "forum) or [Klipper Discord Chat](#discord-chat). Both are communities where "
 "Klipper users can discuss Klipper with other users."
 msgstr ""
+"Если вы хотите поделиться своими знаниями и опытом с другими пользователями "
+"Klipper, то вы можете присоединиться к [Klipper Community Forum](#community-"
+"forum) или [Klipper Discord Chat](#discord-chat). Оба сообщества - это "
+"сообщества, где пользователи Klipper могут обсуждать Klipper с другими "
+"пользователями."
 
 msgid ""
 "Many questions we receive are general 3d-printing questions that are not "
@@ -86,12 +92,14 @@ msgid ""
 "asking in a general 3d-printing forum or a forum dedicated to your printer "
 "hardware."
 msgstr ""
-
-msgid "Do not open a Klipper github issue to ask a question."
-msgstr ""
+"Многие вопросы, которые мы получаем, являются общими вопросами 3d-печати, не"
+" относящимися к Klipper. Если у вас есть общий вопрос или вы испытываете "
+"общие проблемы с печатью, то, скорее всего, вы получите лучший ответ, задав "
+"вопрос на общем форуме по 3d-печати или на форуме, посвященном оборудованию "
+"вашего принтера."
 
 msgid "I have a feature request"
-msgstr ""
+msgstr "У меня есть просьба о возможности"
 
 msgid ""
 "All new features require someone interested and able to implement that "
@@ -100,20 +108,25 @@ msgid ""
 "Forum](#community-forum). There is also [Klipper Discord Chat](#discord-"
 "chat) for discussions between collaborators."
 msgstr ""
-
-msgid "Do not open a Klipper github issue to request a feature."
-msgstr ""
+"Для всех новых функций требуется кто-то заинтересованный и способный "
+"реализовать эту функцию. Если вы заинтересованы в помощи в реализации или "
+"тестировании новой функции, вы можете поискать текущие разработки на "
+"[Klipper Community Forum](#community-forum). Существует также [Klipper "
+"Discord Chat](#discord-chat) для обсуждений между участниками."
 
 msgid "Help! It doesn't work!"
-msgstr ""
+msgstr "Помогите! Не работает!"
 
 msgid ""
 "Unfortunately, we receive many more requests for help than we could possibly"
 " answer. Most problem reports we see are eventually tracked down to:"
 msgstr ""
+"К сожалению, мы получаем гораздо больше запросов о помощи, чем можем "
+"ответить. Большинство сообщений о проблемах, которые мы видим, в конечном "
+"итоге сводятся к следующему:"
 
 msgid "Subtle errors in the hardware, or"
-msgstr ""
+msgstr "Незначительные ошибки в оборудовании, или"
 
 msgid "Not following all the steps described in the Klipper documentation."
 msgstr ""
@@ -138,37 +151,16 @@ msgid ""
 "Forum](#community-forum)."
 msgstr ""
 
-msgid "Do not open a Klipper github issue to request help."
-msgstr ""
-
-msgid "I have diagnosed a defect in the Klipper software"
-msgstr ""
-
 msgid ""
 "Klipper is an open-source project and we appreciate when collaborators "
 "diagnose errors in the software."
 msgstr ""
+"Klipper - это проект с открытым исходным кодом, и мы ценим, когда соавторы "
+"диагностируют ошибки в программном обеспечении."
 
 msgid ""
 "There is important information that will be needed in order to fix a bug. "
 "Please follow these steps:"
-msgstr ""
-
-msgid ""
-"Be sure the bug is in the Klipper software. If you are thinking \"there is a"
-" problem, I can't figure out why, and therefore it is a Klipper bug\", then "
-"**do not** open a github issue. In that case, someone interested and able "
-"will need to first research and diagnose the root cause of the problem. If "
-"you would like to share the results of your research or check if other users"
-" are experiencing similar issues then you can search the [Klipper Community "
-"Forum](#community-forum)."
-msgstr ""
-
-msgid ""
-"If possible, run an `M112` command in the OctoPrint terminal window "
-"immediately after the undesirable event occurs. This causes Klipper to go "
-"into a \"shutdown state\" and it will cause additional debugging information"
-" to be written to the log file."
 msgstr ""
 
 msgid ""
@@ -203,14 +195,6 @@ msgid ""
 "Only the full unmodified log file provides the necessary information."
 msgstr ""
 
-msgid ""
-"If the log file is very large (eg, greater than 2MB) then one may need to "
-"compress the log with zip or gzip."
-msgstr ""
-
-msgid "![attach-issue](img/attach-issue.png)"
-msgstr ""
-
 msgid "I am making changes that I'd like to include in Klipper"
 msgstr ""
 
@@ -223,15 +207,6 @@ msgid ""
 "important information."
 msgstr ""
 
-msgid ""
-"There are several [documents for developers](Overview.md#developer-"
-"documentation). If you have questions on the code then you can also ask in "
-"the [Klipper Community Forum](#community-forum) or on the [Klipper Community"
-" Discord](#discord-chat). If you would like to provide an update on your "
-"current progress then you can open a Github issue with the location of your "
-"code, an overview of the changes, and a description of its current status."
-msgstr ""
-
 #: docs/Contact.md:block 1 (header)
 msgid "Contact"
 msgstr "контакт"
@@ -242,23 +217,146 @@ msgid ""
 "<https://discord.klipper3d.org>."
 msgstr ""
 
-#: docs/Contact.md:block 29 (ordered list)
+#: docs/Contact.md:block 3 (ordered list)
+msgid ""
+"[I found a bug in the Klipper software](#i-found-a-bug-in-the-klipper-"
+"software)"
+msgstr ""
+
+#: docs/Contact.md:block 3 (ordered list)
+msgid "[Klipper github](#klipper-github)"
+msgstr ""
+
+#: docs/Contact.md:block 23 (header)
+msgid "I found a bug in the Klipper software"
+msgstr ""
+
+#: docs/Contact.md:block 25 (paragraph)
+msgid ""
+"Problems should be reported in the [Klipper Community Forum](#community-"
+"forum)."
+msgstr ""
+
+#: docs/Contact.md:block 27 (ordered list)
 msgid ""
 "Make sure you are running unmodified code from "
 "<https://github.com/Klipper3d/klipper>. If the code has been modified or is "
-"obtained from another source, then you will need to reproduce the problem on"
-" the unmodified code from <https://github.com/Klipper3d/klipper> prior to "
-"reporting an issue."
+"obtained from another source, then you should reproduce the problem on the "
+"unmodified code from <https://github.com/Klipper3d/klipper> prior to "
+"reporting."
 msgstr ""
 
-#: docs/Contact.md:block 30 (paragraph)
+#: docs/Contact.md:block 27 (ordered list)
 msgid ""
-"Open a new github issue at <https://github.com/Klipper3d/klipper/issues> and"
-" provide a clear description of the problem. The Klipper developers need to "
-"understand what steps were taken, what the desired outcome was, and what "
-"outcome actually occurred. The Klipper log file **must be attached** to that"
-" ticket:"
+"If possible, run an `M112` command immediately after the undesirable event "
+"occurs. This causes Klipper to go into a \"shutdown state\" and it will "
+"cause additional debugging information to be written to the log file."
 msgstr ""
+
+#: docs/Contact.md:block 27 (ordered list)
+msgid "It is a good idea to compress the log file with zip or gzip."
+msgstr ""
+
+#: docs/Contact.md:block 27 (ordered list)
+msgid ""
+"Open a new topic on the [Klipper Community Forum](#community-forum) and "
+"provide a clear description of the problem. Other Klipper contributors will "
+"need to understand what steps were taken, what the desired outcome was, and "
+"what outcome actually occurred. The compressed Klipper log file should be "
+"attached to that topic."
+msgstr ""
+
+#: docs/Contact.md:block 31 (paragraph)
+msgid ""
+"There are several [documents for developers](Overview.md#developer-"
+"documentation). If you have questions on the code then you can also ask in "
+"the [Klipper Community Forum](#community-forum) or on the [Klipper Community"
+" Discord](#discord-chat)."
+msgstr ""
+
+#: docs/Contact.md:block 32 (header)
+msgid "Klipper github"
+msgstr ""
+
+#: docs/Contact.md:block 33 (paragraph)
+msgid ""
+"Klipper github may be used by contributors to share the status of their work"
+" to improve Klipper. It is expected that the person opening a github ticket "
+"is actively working on the given task and will be the one performing all the"
+" work necessary to accomplish it. The Klipper github is not used for "
+"requests, nor to report bugs, nor to ask questions. Use the [Klipper "
+"Community Forum](#community-forum) or the [Klipper Community "
+"Discord](#discord-chat) instead."
+msgstr ""
+
+#~ msgid ""
+#~ "[I have diagnosed a defect in the Klipper software](#i-have-diagnosed-a-"
+#~ "defect-in-the-klipper-software)"
+#~ msgstr ""
+#~ "[Я диагностировал дефект в программном обеспечении Klipper](#i-have-"
+#~ "diagnosed-a-defect-in-the-klipper-software)"
+
+#~ msgid "Do not open a Klipper github issue to ask a question."
+#~ msgstr "Не открывайте проблему Klipper на github, чтобы задать вопрос."
+
+#~ msgid "Do not open a Klipper github issue to request a feature."
+#~ msgstr "Не открывайте проблему Klipper на github для запроса функции."
+
+#~ msgid "Do not open a Klipper github issue to request help."
+#~ msgstr "Не открывайте проблему Klipper на github для запроса помощи."
+
+#~ msgid "I have diagnosed a defect in the Klipper software"
+#~ msgstr "Я диагностировал дефект в программном обеспечении Klipper"
+
+#~ msgid ""
+#~ "Be sure the bug is in the Klipper software. If you are thinking \"there is a"
+#~ " problem, I can't figure out why, and therefore it is a Klipper bug\", then "
+#~ "**do not** open a github issue. In that case, someone interested and able "
+#~ "will need to first research and diagnose the root cause of the problem. If "
+#~ "you would like to share the results of your research or check if other users"
+#~ " are experiencing similar issues then you can search the [Klipper Community "
+#~ "Forum](#community-forum)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If possible, run an `M112` command in the OctoPrint terminal window "
+#~ "immediately after the undesirable event occurs. This causes Klipper to go "
+#~ "into a \"shutdown state\" and it will cause additional debugging information"
+#~ " to be written to the log file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the log file is very large (eg, greater than 2MB) then one may need to "
+#~ "compress the log with zip or gzip."
+#~ msgstr ""
+
+#~ msgid "![attach-issue](img/attach-issue.png)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There are several [documents for developers](Overview.md#developer-"
+#~ "documentation). If you have questions on the code then you can also ask in "
+#~ "the [Klipper Community Forum](#community-forum) or on the [Klipper Community"
+#~ " Discord](#discord-chat). If you would like to provide an update on your "
+#~ "current progress then you can open a Github issue with the location of your "
+#~ "code, an overview of the changes, and a description of its current status."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make sure you are running unmodified code from "
+#~ "<https://github.com/Klipper3d/klipper>. If the code has been modified or is "
+#~ "obtained from another source, then you will need to reproduce the problem on"
+#~ " the unmodified code from <https://github.com/Klipper3d/klipper> prior to "
+#~ "reporting an issue."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open a new github issue at <https://github.com/Klipper3d/klipper/issues> and"
+#~ " provide a clear description of the problem. The Klipper developers need to "
+#~ "understand what steps were taken, what the desired outcome was, and what "
+#~ "outcome actually occurred. The Klipper log file **must be attached** to that"
+#~ " ticket:"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Make sure you are running unmodified code from "

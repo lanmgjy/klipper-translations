@@ -175,6 +175,12 @@
                   </a>
                 </li>
                 
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
             </ul>
           </div>
         </div>
@@ -1252,13 +1258,14 @@
 <h1 id="caracteristiques">Caractéristiques<a class="headerlink" href="#caracteristiques" title="Permanent link">&para;</a></h1>
 <p>Klipper propose plusieurs caractéristiques intéressantes :</p>
 <ul>
-<li>Mouvement pas à pas de haute précision. Klipper utilise un processeur d'application (comme un Raspberry Pi à bas prix) pour calculer les mouvements de l'imprimante. Le processeur d'application détermine le moment où il faut faire marcher chaque moteur pas à pas, il compresse ces événements, les transmet au microcontrôleur, puis le microcontrôleur exécute chaque événement au moment demandé. Chaque événement du moteur pas à pas est programmé avec une précision de 25 microsecondes ou mieux. Le logiciel n'utilise pas d'estimations cinématiques (telles que l'algorithme de Bresenham), mais calcule des temps de pas précis basés sur la physique de l'accélération et la physique de la cinématique de la machine. Un mouvement plus précis des pas se traduit par un fonctionnement plus silencieux et plus stable de l'imprimante.</li>
-<li>Best in class performance. Klipper is able to achieve high stepping rates on both new and old micro-controllers. Even old 8bit micro-controllers can obtain rates over 175K steps per second. On more recent micro-controllers, several million steps per second are possible. Higher stepper rates enable higher print velocities. The stepper event timing remains precise even at high speeds which improves overall stability.</li>
+<li>Mouvements pas à pas de haute précision. Klipper utilise un processeur d'application (tel qu'un Raspberry Pi à bas prix) pour calculer les mouvements de l'imprimante. Ce processeur d'application détermine le moment où il faut faire marcher chaque moteur pas à pas, compresse ces événements, les transmet au microcontrôleur pour que celui-ci exécute chaque événement au moment demandé. Chaque événement du moteur pas à pas est programmé avec une précision de 25 microsecondes ou mieux. Le logiciel n'utilise pas d'estimations cinématiques (telles que l'algorithme de Bresenham), au lieu de cela, il calcule des durées de pas précises basées sur les physiques de l'accélération et de la cinématique de la machine. Un mouvement plus précis des pas permet un fonctionnement plus silencieux et plus stable de l'imprimante.</li>
+<li>Meilleur dans sa catégorie. Klipper est capable d'atteindre des taux de pas élevés sur les nouveaux et anciens microcontrôleurs. Même les anciens microcontrôleurs 8 bits peuvent obtenir des vitesses supérieures à 175 000 pas par seconde. Sur des microcontrôleurs plus récents, plusieurs millions de pas par seconde sont possibles. Des vitesses pas à pas plus élevées permettent des vitesses d'impression plus élevées. La synchronisation des événements pas à pas reste précise même à des vitesses élevées, ce qui améliore la stabilité globale.</li>
 <li>Klipper prend en charge les imprimantes dotées de plusieurs microcontrôleurs. Par exemple, un microcontrôleur peut être utilisé pour contrôler l'extrudeur, tandis qu'un autre contrôle les pièces chauffantes de l'imprimante, et un troisième s'occupe du reste de l'imprimante. Le logiciel Klipper met en œuvre la synchronisation de l'horloge pour tenir compte de la dérive entre les microcontrôleurs. Il n'y a pas besoin de code particulier pour activer plusieurs microcontrôleurs - il suffit de quelques lignes supplémentaires dans le fichier de configuration.</li>
 <li>Configuration grâce à un fichier de configuration unique. Il n'est pas nécessaire de reflasher le microcontrôleur pour modifier un paramètre. Toute la configuration de Klipper est stockée dans un fichier de configuration standard qui peut être facilement modifié. Cela facilite la configuration et la maintenance du matériel.</li>
 <li>Klipper prend en charge la fonction "Smooth Pressure Advance", un mécanisme permettant de prendre en compte les effets de la pression dans un extrudeur. Cela réduit le "suintement" de l'extrudeur et améliore la qualité des d'impression des coins. L'implémentation de Klipper n'introduit pas de changements instantanés de la vitesse de l'extrudeur, ce qui améliore la stabilité et la robustesse générales.</li>
 <li>Klipper prend en charge la fonction "Input Shaping" pour réduire l'impact des vibrations sur la qualité d'impression. Cela peut réduire ou éliminer le "ringing" (également appelé "ghosting", "echoing" ou "rippling") des impressions. Cela peut également permettre d'obtenir des vitesses d'impression plus rapides tout en maintenant une qualité d'impression élevée.</li>
 <li>Klipper utilise un "solveur itératif" pour calculer des temps de pas précis à partir d'équations cinématiques simples. Cela facilite le portage de Klipper sur de nouveaux types de robots et permet de conserver un timing précis même avec une cinématique complexe (aucune "segmentation de ligne" n'est nécessaire).</li>
+<li>Klipper est agnostique vis-à-vis du matériel. On doit obtenir le même timing précis indépendamment du matériel électronique de bas niveau. Le code du microcontrôleur de Klipper est conçu pour suivre fidèlement l’ordonnancement fourni par le logiciel hôte de Klipper (ou pour alerter l'utilisateur de manière évidente s'il n'y parvient pas). Il est ainsi plus facile d'utiliser le matériel disponible, de mettre à niveau vers un nouveau matériel et d'être confiant dans ce matériel.</li>
 <li>Code portable. Klipper fonctionne sur les micro-contrôleurs basés sur ARM, AVR et PRU. Les imprimantes existantes de type "reprap" peuvent utiliser Klipper sans modification matérielle - il suffit d'ajouter un Raspberry Pi. La conception interne du code de Klipper facilite le support d'autres architectures de micro-contrôleurs.</li>
 <li>Un code plus simple. Klipper utilise un langage de très haut niveau (Python) pour la plupart du code. Les algorithmes cinématiques, l'analyse du code G, les algorithmes de chauffage et de thermistance, etc. sont tous écrits en Python. Il est donc plus facile de développer de nouvelles fonctionnalités.</li>
 <li>Macros programmables personnalisées. De nouvelles commandes G-Code peuvent être définies dans le fichier de configuration de l'imprimante (aucune modification du code n'est alors nécessaire). Ces commandes sont programmables - ce qui leur permet de produire différentes actions selon l'état de l'imprimante.</li>
@@ -1267,23 +1274,24 @@
 <h2 id="caracteristiques-supplementaires">Caractéristiques supplémentaires<a class="headerlink" href="#caracteristiques-supplementaires" title="Permanent link">&para;</a></h2>
 <p>Klipper prend en charge de nombreuses fonctionnalités standard des imprimantes 3d :</p>
 <ul>
-<li>Fonctionne avec Octoprint. Cela permet de contrôler l'imprimante à l'aide d'un navigateur web ordinaire. Le même Raspberry Pi qui fait tourner Klipper peut aussi faire tourner Octoprint.</li>
-<li>Standard G-Code support. Common g-code commands that are produced by typical "slicers" (SuperSlicer, Cura, PrusaSlicer, etc.) are supported.</li>
+<li>Plusieurs interfaces web disponibles. Fonctionne avec Mainsail, Fluidd, OctoPrint et d'autres. Cela permet de contrôler l'imprimante à l'aide d'un navigateur web ordinaire. Le même Raspberry Pi qui fait fonctionner Klipper peut également faire fonctionner l'interface web.</li>
+<li>Prise en charge du G-Code standard. Les commandes de g-code courantes produites par les "trancheurs" (slicers) typiques (SuperSlicer, Cura, PrusaSlicer, etc.) sont prises en charge.</li>
 <li>Prise en charge de l'extrusion multiple. Les extrudeurs avec réchauffeurs partagés et les extrudeurs sur chariots indépendants (IDEX) sont également prises en charge.</li>
-<li>Support for cartesian, delta, corexy, corexz, hybrid-corexy, hybrid-corexz, rotary delta, polar, and cable winch style printers.</li>
+<li>Prise en charge des imprimantes cartésiennes, delta, corexy, corexz, hybrides-corexy, hybrides-corexz, deltesiennes, rotatives delta, polaires et à treuil.</li>
 <li>Support du nivellement automatique du bed. Klipper peut être configuré pour une détection de base de l'inclinaison du bed ou pour une mise à niveau complète de celui-ci. Si le bed utilise plusieurs steppers Z, Klipper peut également le mettre à niveau en manipulant indépendamment les steppers Z. La plupart des capteurs de hauteur Z sont prises en charge, y compris les sondes BL-Touch et les sondes activées par servomoteur.</li>
 <li>Prise en charge du calibrage delta automatique. L'outil d'étalonnage peut effectuer un étalonnage de base de la hauteur ainsi qu'un avancé des dimensions X et Y. L'étalonnage peut être effectué avec un palpeur de l'axe Z ou manuellement.</li>
-<li>Support for common temperature sensors (eg, common thermistors, AD595, AD597, AD849x, PT100, PT1000, MAX6675, MAX31855, MAX31856, MAX31865, BME280, HTU21D, DS18B20, and LM75). Custom thermistors and custom analog temperature sensors can also be configured. One can monitor the internal micro-controller temperature sensor and the internal temperature sensor of a Raspberry Pi.</li>
+<li>Prise en charge de l'option "exclure un objet" lors de l'impression. Lorsqu'il est configuré, ce module peut faciliter l'annulation d'un seul objet dans une impression en plusieurs parties.</li>
+<li>Prise en charge des capteurs de température courants (par exemple, les thermistances courantes, AD595, AD597, AD849x, PT100, PT1000, MAX6675, MAX31855, MAX31856, MAX31865, BME280, HTU21D, DS18B20 et LM75). Des thermistances et des capteurs de température analogiques personnalisés peuvent également être configurés. On peut surveiller le capteur de température interne du microcontrôleur et le capteur de température interne d'un Raspberry Pi.</li>
 <li>Protection thermique basique de l'appareil activée par défaut.</li>
-<li>Support for standard fans, nozzle fans, and temperature controlled fans. No need to keep fans running when the printer is idle. Fan speed can be monitored on fans that have a tachometer.</li>
-<li>Prise en charge de la configuration en temps réel des pilotes de moteurs pas à pas TMC2130, TMC2208/TMC2224, TMC2209, TMC2660 et TMC5160. Il existe également un support pour le contrôle du courant des pilotes pas à pas traditionnels via AD5206, MCP4451, MCP4728, MCP4018 et les broches PWM.</li>
+<li>Prise en charge des ventilateurs standard, des ventilateurs de buses et des ventilateurs à température contrôlée. Il n'est pas nécessaire de faire tourner les ventilateurs lorsque l'imprimante est inactive. La vitesse du ventilateur peut être contrôlée sur les ventilateurs dotés d'un tachymètre.</li>
+<li>Prise en charge de la configuration en temps réel des pilotes de moteurs pas à pas TMC2130, TMC2208/TMC2224, TMC2209, TMC2660 et TMC5160. Il existe également un support pour le contrôle du courant des pilotes de moteurs pas à pas traditionnels via AD5206, DAC084S085, MCP4451, MCP4728, MCP4018, et les broches PWM.</li>
 <li>Prise en charge des écrans LCD courants fixés directement à l'imprimante. Un menu par défaut est également disponible. Le contenu de l'écran et du menu peut être entièrement personnalisé via le fichier de configuration.</li>
 <li>Accélération constante et prise en charge du "look-ahead". Tous les mouvements de l'imprimante s'accélèrent progressivement de l'arrêt à la vitesse de croisière, puis décélèrent pour revenir à l'arrêt. Le flux entrant de commandes de mouvement en G-Code est mis en file d'attente et analysé - l'accélération entre les mouvements dans une direction similaire sera optimisée pour réduire les blocages d'impression et améliorer le temps d'impression global.</li>
 <li>Klipper met en œuvre un algorithme de "fin de phase pas à pas" qui peut améliorer la précision des interrupteurs de butée. Lorsqu'il est correctement réglé, il peut améliorer l'adhérence de la première couche d'une impression.</li>
-<li>Support for filament presence sensors, filament motion sensors, and filament width sensors.</li>
-<li>Support pour la mesure et l'enregistrement de l'accélération en utilisant un accéléromètre adxl345.</li>
+<li>Prise en charge des capteurs de présence de filaments, des capteurs de mouvement de filaments et des capteurs de largeur de filaments.</li>
+<li>Prise en charge de la mesure et l'enregistrement de l'accélération à l'aide d'un accéléromètre adxl345, mpu9250 et mpu6050.</li>
 <li>Prise en charge de la limitation de la vitesse maximale des mouvements courts en "zigzag" pour réduire les vibrations et le bruit de l'imprimante. Voir le document <a href="Kinematics.html">Cinématiques</a> pour plus d'informations.</li>
-<li>Des exemples de fichiers de configuration sont disponibles pour de nombreuses imprimantes courantes. Consultez le <a href="https://github.com/Klipper3d/klipper/blob/master/config/">répertoire config</a> pour en obtenir la liste.</li>
+<li>Des exemples de fichiers de configuration sont disponibles pour de nombreuses imprimantes courantes. Consultez le <a href="https://github.com/Klipper3d/klipper/blob/master/config/">répertoire des configurations</a> pour en obtenir la liste.</li>
 </ul>
 <p>Pour commencer avec Klipper, lisez le guide d'<a href="Installation.html">installation</a>.</p>
 <h2 id="tests-de-performance-du-stepper">Tests de performance du stepper<a class="headerlink" href="#tests-de-performance-du-stepper" title="Permanent link">&para;</a></h2>
@@ -1292,7 +1300,7 @@
 <thead>
 <tr>
 <th>Microcontrôleur</th>
-<th>1 stepper active</th>
+<th>1 stepper actif</th>
 <th>3 steppers actifs</th>
 </tr>
 </thead>
@@ -1368,6 +1376,11 @@
 <td>1885K</td>
 </tr>
 <tr>
+<td>AR100</td>
+<td>3529K</td>
+<td>2507K</td>
+</tr>
+<tr>
 <td>STM32F407</td>
 <td>3652K</td>
 <td>2459K</td>
@@ -1377,10 +1390,15 @@
 <td>3913K</td>
 <td>2634K</td>
 </tr>
+<tr>
+<td>STM32H743</td>
+<td>9091K</td>
+<td>6061K</td>
+</tr>
 </tbody>
 </table>
-<p>If unsure of the micro-controller on a particular board, find the appropriate <a href="https://github.com/Klipper3d/klipper/blob/master/config/">config file</a>, and look for the micro-controller name in the comments at the top of that file.</p>
-<p>Further details on the benchmarks are available in the <a href="Benchmarks.html">Benchmarks document</a>.</p>
+<p>Si vous n'êtes pas sûr du microcontrôleur d'une carte particulière, trouvez le <a href="https://github.com/Klipper3d/klipper/blob/master/config/">fichier de configuration</a> approprié , et cherchez le nom du microcontrôleur dans les commentaires en haut de ce fichier.</p>
+<p>De plus amples détails sur les bancs d'essais sont disponibles dans le <a href="Benchmarks.html">document des bancs d'essais</a>.</p>
 
               
             </article>

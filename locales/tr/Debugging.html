@@ -175,6 +175,12 @@
                   </a>
                 </li>
                 
+                <li class="md-select__item">
+                  <a href="/fr/" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
             </ul>
           </div>
         </div>
@@ -1298,7 +1304,7 @@
 
 
 <h1 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h1>
-<p>This document describes some of the Klipper debugging tools.</p>
+<p>Bu belge Klipper hata ayıklama araçlarından bazılarını açıklamaktadır.</p>
 <h2 id="running-the-regression-tests">Running the regression tests<a class="headerlink" href="#running-the-regression-tests" title="Permanent link">&para;</a></h2>
 <p>The main Klipper GitHub repository uses "github actions" to run a series of regression tests. It can be useful to run some of these tests locally.</p>
 <p>The source code "whitespace check" can be run with:</p>
@@ -1401,7 +1407,7 @@ make build
 <div class="highlight"><pre><span></span><code>ls ./build/pysimulavr/_pysimulavr.*.so
 </code></pre></div>
 
-<p>This commmand should report a specific file (e.g. <strong>./build/pysimulavr/_pysimulavr.cpython-39-x86_64-linux-gnu.so</strong>) and not an error.</p>
+<p>This command should report a specific file (e.g. <strong>./build/pysimulavr/_pysimulavr.cpython-39-x86_64-linux-gnu.so</strong>) and not an error.</p>
 <p>If you are on a Debian-based system (Debian, Ubuntu, etc.) you can install the following packages and generate *.deb files for system-wide installation of simulavr:</p>
 <div class="highlight"><pre><span></span><code>sudo apt update
 sudo apt install g++ make cmake swig rst2pdf help2man texinfo

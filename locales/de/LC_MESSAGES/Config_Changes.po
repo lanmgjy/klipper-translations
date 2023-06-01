@@ -1,20 +1,21 @@
 # Sebastian Fiedler <See1807@hotmail.de>, 2022.
 # Sven van Beckum <kontakt@partner-3d.de>, 2022.
 # Yifei Ding <dingyifeiair@gmail.com>, 2022.
+# Mathis Mensing <gcmatmen@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
 "POT-Creation-Date: 2021-07-07 01:32+0200\n"
-"PO-Revision-Date: 2022-07-11 18:56+0000\n"
-"Last-Translator: Yifei Ding <dingyifeiair@gmail.com>\n"
+"PO-Revision-Date: 2022-10-26 08:36+0000\n"
+"Last-Translator: Mathis Mensing <gcmatmen@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/klipper/config_changes/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 msgid ""
 "This document covers recent software changes to the config file that are not"
@@ -29,7 +30,7 @@ msgid "All dates in this document are approximate."
 msgstr "Alle Daten in diesem Dokument sind ungefähre Angaben."
 
 msgid "Changes"
-msgstr ""
+msgstr "Änderungen"
 
 msgid ""
 "20210612: The `pid_integral_max` config option in heater and temperature_fan"
@@ -633,6 +634,53 @@ msgid ""
 "\"rp2040-e5\" USB errata. This should make initial USB connections more "
 "reliable. However, it may result in a change in behavior for the gpio15 pin."
 " It is unlikely the gpio15 behavior change will be noticeable."
+msgstr ""
+
+#: docs/Config_Changes.md:block 5 (paragraph)
+msgid ""
+"20221122: Previously, with safe_z_home, it was possible that the z_hop after"
+" the g28 homing would go in the negative z direction. Now, a z_hop is "
+"performed after g28 only if it results in a positive hop, mirroring the "
+"behavior of the z_hop that occurs before the g28 homing."
+msgstr ""
+
+#: docs/Config_Changes.md:block 5 (paragraph)
+msgid ""
+"20230201: The `[bed_mesh]` module no longer loads the `default` profile on "
+"startup. It is recommended that users who use the `default` profile add "
+"`BED_MESH_PROFILE LOAD=default` to their `START_PRINT` macro (or to their "
+"slicer's \"Start G-Code\" configuration when applicable)."
+msgstr ""
+
+#: docs/Config_Changes.md:block 6 (paragraph)
+msgid ""
+"20230103: It is now possible with the flash-sdcard.sh script to flash both "
+"variants of the Bigtreetech SKR-2, STM32F407 and STM32F429. This means that "
+"the original tag of btt-skr2 now has changed to either btt-skr-2-f407 or "
+"btt-skr-2-f429."
+msgstr ""
+
+#: docs/Config_Changes.md:block 7 (paragraph)
+msgid "20221128: Klipper v0.11.0 released."
+msgstr ""
+
+#: docs/Config_Changes.md:block 5 (paragraph)
+msgid ""
+"20230304: The `SET_TMC_CURRENT` command now properly adjusts the "
+"globalscaler register for drivers that have it. This removes a limitation "
+"where on tmc5160, the currents could not be raised higher with "
+"`SET_TMC_CURRENT` than the `run_current` value set in the config file. "
+"However, this has a side effect: After running `SET_TMC_CURRENT`, the "
+"stepper must be held at standstill for >130ms in case StealthChop2 is used "
+"so that the AT#1 calibration gets executed by the driver."
+msgstr ""
+
+#: docs/Config_Changes.md:block 6 (paragraph)
+msgid ""
+"20230202: The format of the `printer.screws_tilt_adjust` status information "
+"has changed. The information is now stored as a dictionary of screws with "
+"the resulting measurements. See the [status "
+"reference](Status_Reference.md#screws_tilt_adjust) for details."
 msgstr ""
 
 #~ msgid ""

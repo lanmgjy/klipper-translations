@@ -2,14 +2,14 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: yifeiding@protonmail.com\n"
-"PO-Revision-Date: 2022-09-22 16:23+0000\n"
+"PO-Revision-Date: 2022-11-08 11:51+0000\n"
 "Last-Translator: Zs.Antal <zsikaiantal@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/klipper/beaglebone/hu/>\n"
 "Language: hu\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: docs/Beaglebone.md:block 1 (header)
 msgid "Beaglebone"
@@ -101,7 +101,7 @@ msgstr ""
 "Módosítani kell az OctoPrint **/etc/default/octoprint** konfigurációs "
 "fájlját. Meg kell változtatni a `OCTOPRINT_USER` felhasználót `debian`-ra, "
 "változtassuk meg a `NICELEVEL`-t `0`-ra, vegyük ki a `BASEDIR` megjegyzést, "
-"`CONFIGFILE`, és `DAEMON` beállításokat, és módosítsa a hivatkozásokat "
+"`CONFIGFILE`, és `DAEMON` beállításokat, és módosítsd a hivatkozásokat "
 "`/home/pi/`-ről `/home/debian/`-re:"
 
 #: docs/Beaglebone.md:block 13 (code)
@@ -110,7 +110,7 @@ msgstr "sudo nano /etc/default/octoprint\n"
 
 #: docs/Beaglebone.md:block 14 (paragraph)
 msgid "Then start the Octoprint service:"
-msgstr "Ezután indítsa el az Octoprint szolgáltatást:"
+msgstr "Ezután indítsd el az Octoprint szolgáltatást:"
 
 #: docs/Beaglebone.md:block 15 (code)
 msgid "sudo systemctl start octoprint\n"
@@ -121,8 +121,8 @@ msgid ""
 "Make sure the OctoPrint web server is accessible - it should be at: "
 "<http://beaglebone:5000/>"
 msgstr ""
-"Győződjön meg róla, hogy az OctoPrint webszerver elérhető - a következő "
-"címen kell lennie: <http://beaglebone:5000/>"
+"Győződj meg róla, hogy az OctoPrint webszerver elérhető - a következő címen "
+"kell lennie: <http://beaglebone:5000/>"
 
 #: docs/Beaglebone.md:block 17 (header)
 msgid "Building the micro-controller code"
@@ -147,7 +147,7 @@ msgstr ""
 #: docs/Beaglebone.md:block 20 (paragraph)
 msgid "To build and install the new micro-controller code, run:"
 msgstr ""
-"Az új mikrokontroller kódjának elkészítéséhez és telepítéséhez futtassa a "
+"Az új mikrokontroller kódjának elkészítéséhez és telepítéséhez futtasd a "
 "következőt:"
 
 #: docs/Beaglebone.md:block 21 (code)
@@ -166,7 +166,7 @@ msgid ""
 "Linux host process. Configure it a second time for a \"Linux process\":"
 msgstr ""
 "Szükséges továbbá a mikrokontroller kódjának lefordítása és telepítése egy "
-"Linux gazdafolyamathoz. Konfigurálja másodszor is egy \"Linux folyamat\" "
+"Linux gazdafolyamathoz. Konfiguráld másodszor is egy \"Linux folyamat\" "
 "számára:"
 
 #: docs/Beaglebone.md:block 23 (code)
@@ -175,7 +175,7 @@ msgstr "make menuconfig\n"
 
 #: docs/Beaglebone.md:block 24 (paragraph)
 msgid "Then install this micro-controller code as well:"
-msgstr "Ezután telepítse ezt a mikrokontroller kódot is:"
+msgstr "Ezután telepítsd ezt a mikrokontroller kódot is:"
 
 #: docs/Beaglebone.md:block 26 (header)
 msgid "Remaining configuration"
@@ -187,7 +187,7 @@ msgid ""
 " instructions in the main [Installation](Installation.md#configuring-"
 "klipper) document."
 msgstr ""
-"Fejezze be a telepítést a Klipper és az Octoprint konfigurálásával a "
+"Fejezd be a telepítést a Klipper és az Octoprint konfigurálásával a "
 "[Telepítés](Installation.md#configuring-klipper) fődokumentumban található "
 "utasítások szerint."
 
@@ -207,7 +207,7 @@ msgstr ""
 "Sajnos a Beaglebone processzor néha nehezen tudja jól futtatni az "
 "OctoPrintet. Előfordult már, hogy összetett nyomtatásoknál a nyomtatás "
 "akadozott (a nyomtató gyorsabban mozog, mint ahogy az OctoPrint mozgatási "
-"parancsokat tud küldeni). Ha ez előfordul, fontolja meg a \"virtual_sdcard\""
-" funkció használatát (a részletekért lásd a [konfigurációs "
+"parancsokat tud küldeni). Ha ez előfordul, fontold meg a \"virtual_sdcard\" "
+"funkció használatát (a részletekért lásd a [konfigurációs "
 "hivatkozást](Config_Reference.md#virtual_sdcard)), hogy közvetlenül a "
 "Klipperből nyomtass."
